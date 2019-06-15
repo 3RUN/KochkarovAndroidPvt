@@ -9,13 +9,22 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+<<<<<<< Updated upstream
         <activity android:name="">
+=======
+        <activity android:name=".dz0.Dz0Activity"/>
+        <activity android:name=".dz1.Dz1Activity"/>
+        <activity android:name=".cw1.Cw1Activity"/>
+
+        <activity android:name=".menu.MenuActivity">
+>>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

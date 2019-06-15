@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">KochkarovAndroidPvt</string>
-<<<<<<< Updated upstream
-</resources>
-=======
+
     // dz0
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>
@@ -15,4 +13,4 @@
     <string name="dzOneButtonStr">DZ1</string>
 
 </resources>
->>>>>>> Stashed changes
+

@@ -1,6 +1,5 @@
 package by.itacademy.pvt.dz0
 
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import by.itacademy.pvt.R
@@ -30,13 +29,13 @@ class Dz0Activity : AppCompatActivity() {
     }
 
     private fun swapText() {
-        val str: String = textA.text.toString()
+        val str = textA.text
         textA.text = textB.text
         textB.text = str
     }
 
     private fun swapColor() {
-        val temp: Drawable = textA.background
+        val temp = textA.background
         textA.background = textB.background
         textB.background = temp
     }

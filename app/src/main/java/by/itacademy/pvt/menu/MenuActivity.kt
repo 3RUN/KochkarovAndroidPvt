@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import by.itacademy.pvt.R
+import by.itacademy.pvt.cw1.Cw1Activity
 import by.itacademy.pvt.dz0.Dz0Activity
 import by.itacademy.pvt.dz1.Dz1Activity
 
@@ -19,14 +20,26 @@ class MenuActivity : Activity() {
                 startDz0()
             }
 
+        findViewById<View>(R.id.cwButton)
+            .setOnClickListener{
+                startCw1()
+            }
+
         findViewById<View>(R.id.dzOneButton)
             .setOnClickListener {
                 startDz1()
             }
+
+
     }
 
     private fun startDz0() {
         val intent = Intent(this, Dz0Activity::class.java)
+        startActivity(intent)
+    }
+
+    private fun startCw1(){
+        val intent = Intent(this, Cw1Activity::class.java)
         startActivity(intent)
     }
 

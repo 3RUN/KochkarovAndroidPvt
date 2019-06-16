@@ -9,6 +9,7 @@
     <string name="cw1Text">Hello</string>
     <string name="cw1Button">Hello</string>
     // menu
+    <string name="cwButtonStr">CW1</string>
     <string name="dzButtonStr">DZ0</string>
     <string name="dzOneButtonStr">DZ1</string>
 

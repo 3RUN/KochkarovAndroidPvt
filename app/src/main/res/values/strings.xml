@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">KochkarovAndroidPvt</string>
+
+    // dz0
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>
     <string name="textButton">Click Me</string>
+    // cw1
+    <string name="cw1Text">Hello</string>
+    <string name="cw1Button">Hello</string>
+    // menu
+    <string name="dzButtonStr">DZ0</string>
+    <string name="dzOneButtonStr">DZ1</string>
+    // dz1
+
 </resources>

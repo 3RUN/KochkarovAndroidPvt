@@ -1,176 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <LinearLayout
-            android:background="@android:color/darker_gray"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical">
 
         // poland + austria
+
         <RelativeLayout
-                android:layout_marginTop="16dp"
-                android:layout_gravity="center"
-                android:background="@android:color/holo_red_light"
-                android:layout_width="wrap_content"
-                android:layout_height="144dp">
+            android:layout_width="wrap_content"
+            android:layout_height="144dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_red_light">
 
             <View
-                    android:id="@+id/poland"
-                    android:background="@android:color/white"
-                    android:layout_width="192dp"
-                    android:layout_height="72dp"
-            />
+                android:id="@+id/poland"
+                android:layout_width="192dp"
+                android:layout_height="72dp"
+                android:background="@android:color/white" />
 
             <View
-                    android:layout_toRightOf="@+id/poland"
-                    android:id="@+id/separatorOne"
-                    android:background="@android:color/darker_gray"
-                    android:layout_width="16dp"
-                    android:layout_height="match_parent"
-            />
+                android:id="@+id/separatorOne"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/poland"
+                android:background="@android:color/darker_gray" />
 
             <View
-                    android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/separatorOne"
-                    android:id="@+id/austria"
-                    android:background="@android:color/white"
-                    android:layout_width="192dp"
-                    android:layout_height="48dp"
-            />
+                android:id="@+id/austria"
+                android:layout_width="192dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/separatorOne"
+                android:background="@android:color/white" />
 
         </RelativeLayout>
 
         // denmark + thailand
+
         <RelativeLayout
-                android:layout_marginTop="16dp"
-                android:layout_gravity="center"
-                android:background="@android:color/holo_red_light"
-                android:layout_width="wrap_content"
-                android:layout_height="144dp">
+            android:layout_width="wrap_content"
+            android:layout_height="144dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_red_light">
 
             <View
-                    android:layout_centerVertical="true"
-                    android:id="@+id/denmarkOne"
-                    android:background="@android:color/white"
-                    android:layout_width="192dp"
-                    android:layout_height="32dp"
-            />
+                android:id="@+id/denmarkOne"
+                android:layout_width="192dp"
+                android:layout_height="32dp"
+                android:layout_centerVertical="true"
+                android:background="@android:color/white" />
 
             <View
-                    android:layout_marginLeft="56dp"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/denmarkTwo"
-                    android:background="@android:color/white"
-                    android:layout_width="32dp"
-                    android:layout_height="192dp"
-            />
+                android:id="@+id/denmarkTwo"
+                android:layout_width="32dp"
+                android:layout_height="192dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="56dp"
+                android:background="@android:color/white" />
 
             <View
-                    android:layout_toRightOf="@+id/denmarkOne"
-                    android:id="@+id/separatorTwo"
-                    android:background="@android:color/darker_gray"
-                    android:layout_width="16dp"
-                    android:layout_height="match_parent"
-            />
+                android:id="@+id/separatorTwo"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/denmarkOne"
+                android:background="@android:color/darker_gray" />
 
             <View
-                    android:layout_toRightOf="@+id/separatorTwo"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/thailandOne"
-                    android:background="@android:color/white"
-                    android:layout_width="192dp"
-                    android:layout_height="96dp"
-            />
+                android:id="@+id/thailandOne"
+                android:layout_width="192dp"
+                android:layout_height="96dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/separatorTwo"
+                android:background="@android:color/white" />
 
             <View
-                    android:layout_toRightOf="@+id/separatorTwo"
-                    android:layout_centerVertical="true"
-                    android:id="@+id/thailandTwo"
-                    android:background="@android:color/holo_blue_dark"
-                    android:layout_width="192dp"
-                    android:layout_height="48dp"
-            />
+                android:id="@+id/thailandTwo"
+                android:layout_width="192dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/separatorTwo"
+                android:background="@android:color/holo_blue_dark" />
 
         </RelativeLayout>
 
         // italy + madagascar
+
         <RelativeLayout
-                android:layout_marginTop="16dp"
-                android:layout_gravity="center"
-                android:background="@android:color/holo_red_light"
-                android:layout_width="wrap_content"
-                android:layout_height="144dp">
+            android:layout_width="wrap_content"
+            android:layout_height="144dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/holo_red_light">
 
             <View
-                    android:id="@+id/italyOne"
-                    android:background="@android:color/holo_green_dark"
-                    android:layout_width="64dp"
-                    android:layout_height="match_parent"
-            />
+                android:id="@+id/italyOne"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark" />
 
             <View
-                    android:layout_toRightOf="@+id/italyOne"
-                    android:id="@+id/italyTwo"
-                    android:background="@android:color/white"
-                    android:layout_width="64dp"
-                    android:layout_height="match_parent"
-            />
+                android:id="@+id/italyTwo"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/italyOne"
+                android:background="@android:color/white" />
 
             <View
-                    android:layout_marginLeft="64dp"
-                    android:layout_toRightOf="@+id/italyTwo"
-                    android:id="@+id/separatorThree"
-                    android:background="@android:color/darker_gray"
-                    android:layout_width="16dp"
-                    android:layout_height="match_parent"
-            />
+                android:id="@+id/separatorThree"
+                android:layout_width="16dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="64dp"
+                android:layout_toRightOf="@+id/italyTwo"
+                android:background="@android:color/darker_gray" />
 
             <View
-                    android:layout_toRightOf="@+id/separatorThree"
-                    android:id="@+id/madagascarOne"
-                    android:background="@android:color/white"
-                    android:layout_width="64dp"
-                    android:layout_height="match_parent"
-            />
+                android:id="@+id/madagascarOne"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/separatorThree"
+                android:background="@android:color/white" />
 
             <View
-                    android:layout_marginTop="72dp"
-                    android:layout_toRightOf="@+id/madagascarOne"
-                    android:id="@+id/madagascarThree"
-                    android:background="@android:color/holo_green_dark"
-                    android:layout_width="128dp"
-                    android:layout_height="72dp"
-            />
+                android:id="@+id/madagascarThree"
+                android:layout_width="128dp"
+                android:layout_height="72dp"
+                android:layout_marginTop="72dp"
+                android:layout_toRightOf="@+id/madagascarOne"
+                android:background="@android:color/holo_green_dark" />
 
         </RelativeLayout>
 
         // colombia
+
         <RelativeLayout
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:layout_gravity="center"
-                android:background="@android:color/holo_red_light"
-                android:layout_width="wrap_content"
-                android:layout_height="144dp">
+            android:layout_width="wrap_content"
+            android:layout_height="144dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/holo_red_light">
 
             <View
-                    android:id="@+id/colombiaOne"
-                    android:background="@android:color/holo_orange_light"
-                    android:layout_width="192dp"
-                    android:layout_height="72dp"
-            />
+                android:id="@+id/colombiaOne"
+                android:layout_width="192dp"
+                android:layout_height="72dp"
+                android:background="@android:color/holo_orange_light" />
 
             <View
-                    android:layout_below="@+id/colombiaOne"
-                    android:id="@+id/colombiaTwo"
-                    android:background="@android:color/holo_blue_dark"
-                    android:layout_width="192dp"
-                    android:layout_height="36dp"
-            />
+                android:id="@+id/colombiaTwo"
+                android:layout_width="192dp"
+                android:layout_height="36dp"
+                android:layout_below="@+id/colombiaOne"
+                android:background="@android:color/holo_blue_dark" />
 
         </RelativeLayout>
 

@@ -21,7 +21,7 @@ class MenuActivity : Activity() {
             }
 
         findViewById<View>(R.id.cwButton)
-            .setOnClickListener{
+            .setOnClickListener {
                 startCw1()
             }
 
@@ -38,7 +38,7 @@ class MenuActivity : Activity() {
         startActivity(intent)
     }
 
-    private fun startCw1(){
+    private fun startCw1() {
         val intent = Intent(this, Cw1Activity::class.java)
         startActivity(intent)
     }

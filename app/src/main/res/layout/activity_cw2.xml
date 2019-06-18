@@ -96,15 +96,15 @@
             android:layout_height="match_parent">
 
             <Button
+                style="@style/LoginButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
                 android:background="@android:color/darker_gray"
-                android:text="@string/cw2Create"
-                style="@style/LoginButton"/>
+                android:text="@string/cw2Create" />
 
         </RelativeLayout>
 

@@ -1,4 +1,5 @@
 *.iml
+.temp
 .gradle
 /local.properties
 /.idea

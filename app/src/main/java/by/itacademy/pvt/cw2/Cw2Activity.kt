@@ -1,13 +1,13 @@
-package by.itacademy.pvt.dz1
+package by.itacademy.pvt.cw2
 
 import android.app.Activity
 import android.os.Bundle
 import by.itacademy.pvt.R
 
-class Dz1Activity : Activity() {
+class Cw2Activity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dz1)
+        setContentView(R.layout.activity_cw2)
     }
 }

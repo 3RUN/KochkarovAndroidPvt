@@ -33,10 +33,9 @@ class Cw1Activity : Activity() {
         startActivity(intent)
 
         // перейти назад
-        //finish()
+        // finish()
 
         // перейти назад
-        //onBackPressed()
+        // onBackPressed()
     }
-
 }

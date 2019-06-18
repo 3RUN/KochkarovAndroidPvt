@@ -25,7 +25,6 @@ class Dz0Activity : AppCompatActivity() {
             swapText()
             swapColor()
         }
-
     }
 
     private fun swapText() {
@@ -39,5 +38,4 @@ class Dz0Activity : AppCompatActivity() {
         textA.background = textB.background
         textB.background = temp
     }
-
 }

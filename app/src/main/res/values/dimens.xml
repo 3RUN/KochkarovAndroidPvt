@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    // text size
+    <dimen name="loginationEditTextSize">22sp</dimen>
+    // logo company
+    <dimen name="logoMarginTop">96dp</dimen>
+    // EditText global parameters
+    <dimen name="editTextMarginStart">32dp</dimen>
+    <dimen name="editTextMarginEnd">32dp</dimen>
+    <dimen name="editTextPaddingStart">16dp</dimen>
+    <dimen name="editTextPaddingTop">16dp</dimen>
+    <dimen name="editTextPaddingBottom">16dp</dimen>
+    <dimen name="editTextDrawablePadding">16dp</dimen>
+    // Button glocal parameters
+    <dimen name="buttonMarginStart">32dp</dimen>
+    <dimen name="buttonMarginEnd">32dp</dimen>
+    <dimen name="buttonPaddingTop">16dp</dimen>
+    <dimen name="buttonPaddingBottom">16dp</dimen>
+    // login + password edit texts
+    <dimen name="loginEditTextMarginTop">64dp</dimen>
+    <dimen name="passwordEditTextMarginTop">96dp</dimen>
+    // login button button + create account button
+    <dimen name="loginTextSize">24sp</dimen>
+    <dimen name="loginButtonMarginTop">112dp</dimen>
+    // forgot button
+    <dimen name="forgotTextSize">18sp</dimen>
+    <dimen name="forgotMarginTop">72dp</dimen>
 </resources>

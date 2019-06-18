@@ -5,22 +5,18 @@
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>
     <string name="textButton">Click Me</string>
-    // cw1
-    <string name="cw1Text">Hello</string>
-    <string name="cw1Button">Hello</string>
-    // cw2
-    <string name="cw2User">Username</string>
-    <string name="cw2Password">Password</string>
-    <string name="cw2Login">LOG IN</string>
-    <string name="cw2Forgot"><u>Forgot your username/password?</u></string>
-    <string name="cw2Create">CREATE ACCOUNT</string>
+
+    // dz2 login
+    <string name="dz2LoginUser">Username</string>
+    <string name="dz2LoginPassword">Password</string>
+    <string name="dz2LoginLogin">LOG IN</string>
+    <string name="dz2LoginForgot"><u>Forgot your username/password?</u></string>
+    <string name="dz2LoginCreate">CREATE ACCOUNT</string>
 
     // menu
-    <string name="cwButtonStr">CW1</string>
-    <string name="cwTwoButtonStr">CW2</string>
-
     <string name="dzButtonStr">DZ0</string>
-    <string name="dzOneButtonStr">DZ1</string>
-    <string name="dzTwoButtonStr">DZ2</string>
+    <string name="dz1ButtonStr">DZ1</string>
+    <string name="dz2ButtonStr">DZ2</string>
+    <string name="dz2LoginButtonStr">DZ2Login</string>
 
 </resources>

@@ -7,32 +7,56 @@ import android.view.View
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz0.Dz0Activity
 import by.itacademy.pvt.dz1.Dz1Activity
+import by.itacademy.pvt.dz2.Dz2Activity
+import by.itacademy.pvt.dz2.Dz2LoginActivity
 
-class MenuActivity : Activity() {
+class MenuActivity : Activity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        findViewById<View>(R.id.dzButton)
+        findViewById<View>(R.id.dzButtonId)
             .setOnClickListener {
-                startDz0()
+                onClick(findViewById(R.id.dzButtonId))
             }
 
-        findViewById<View>(R.id.dzOneButton)
+        findViewById<View>(R.id.dz1ButtonId)
             .setOnClickListener {
-                startDz1()
+                onClick(findViewById(R.id.dz1ButtonId))
+            }
+
+        findViewById<View>(R.id.dz2ButtonId)
+            .setOnClickListener {
+                onClick(findViewById(R.id.dz2ButtonId))
+            }
+
+        findViewById<View>(R.id.dz2LoginButtonId)
+            .setOnClickListener {
+                onClick(findViewById(R.id.dz2LoginButtonId))
             }
     }
 
-    private fun startDz0() {
-        val intent = Intent(this, Dz0Activity::class.java)
-        startActivity(intent)
-    }
-
-    private fun startDz1() {
-        val intent = Intent(this, Dz1Activity::class.java)
-        startActivity(intent)
+    override fun onClick(p0: View?) {
+        val id = p0!!.id
+        when (id) {
+            R.id.dzButtonId -> {
+                val intent = Intent(this, Dz0Activity::class.java)
+                startActivity(intent)
+            }
+            R.id.dz1ButtonId -> {
+                val intent = Intent(this, Dz1Activity::class.java)
+                startActivity(intent)
+            }
+            R.id.dz2ButtonId -> {
+                val intent = Intent(this, Dz2Activity::class.java)
+                startActivity(intent)
+            }
+            R.id.dz2LoginButtonId -> {
+                val intent = Intent(this, Dz2LoginActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }

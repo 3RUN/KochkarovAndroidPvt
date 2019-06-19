@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">KochkarovAndroidPvt</string>
 
-    // dz0
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>
     <string name="textButton">Click Me</string>
 
-    // dz2 login
     <string name="dz2LoginUser">Username</string>
     <string name="dz2LoginPassword">Password</string>
     <string name="dz2LoginLogin">LOG IN</string>
     <string name="dz2LoginForgot"><u>Forgot your username/password?</u></string>
     <string name="dz2LoginCreate">CREATE ACCOUNT</string>
 
-    // menu
     <string name="dzButtonStr">DZ0</string>
     <string name="dz1ButtonStr">DZ1</string>
     <string name="dz2ButtonStr">DZ2</string>
     <string name="dz2LoginButtonStr">DZ2Login</string>
+
+    <string name="imageURL">https://i.imgur.com/H981AN7.jpg</string>
+    <string name="buttonLoad">LOAD IMAGE</string>
 
 </resources>

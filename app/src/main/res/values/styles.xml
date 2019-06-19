@@ -8,7 +8,6 @@
         <item name="colorAccent">@android:color/white</item>
     </style>
 
-
     <style name="LoginEditText">
         <item name="android:background">#40808080</item>
         <item name="android:textColor">@android:color/white</item>
@@ -50,6 +49,35 @@
         <item name="android:layout_marginEnd">@dimen/buttonMarginEnd</item>
         <item name="android:paddingTop">@dimen/buttonPaddingTop</item>
         <item name="android:paddingBottom">@dimen/buttonPaddingBottom</item>
+        <item name="android:fontFamily">@font/monda_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/loginTextSize</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:text">@string/dz2LoginCreate</item>
+    </style>
+
+    <style name="UrlEditText">
+        <item name="android:background">#40808080</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textSize">@dimen/dz2UrlScale</item>
+        <item name="android:fontFamily">@font/monda_regular</item>
+        <item name="android:paddingStart">@dimen/editTextPaddingStart</item>
+        <item name="android:paddingEnd">@dimen/editTextPaddingStart</item>
+        <item name="android:paddingTop">@dimen/editTextPaddingTop</item>
+        <item name="android:paddingBottom">@dimen/editTextPaddingBottom</item>
+        <item name="android:layout_marginStart">@dimen/editTextMarginStart</item>
+        <item name="android:layout_marginEnd">@dimen/editTextMarginEnd</item>
+        <item name="android:layout_marginTop">@dimen/editTextMarginEnd</item>
+    </style>
+
+    <style name="UrlLoadButton">
+        <item name="android:layout_marginStart">@dimen/buttonMarginStart</item>
+        <item name="android:layout_marginEnd">@dimen/buttonMarginEnd</item>
+        <item name="android:paddingTop">@dimen/buttonPaddingTop</item>
+        <item name="android:paddingBottom">@dimen/buttonPaddingBottom</item>
+        <item name="android:paddingStart">@dimen/buttonPaddingStart</item>
+        <item name="android:paddingEnd">@dimen/buttonPaddingEnd</item>
         <item name="android:fontFamily">@font/monda_bold</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">@dimen/loginTextSize</item>

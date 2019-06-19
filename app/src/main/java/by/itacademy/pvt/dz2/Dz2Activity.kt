@@ -85,7 +85,7 @@ class Dz2Activity : Activity() {
 
     private fun setErrorImage() {
         val view = findViewById<View>(R.id.imageLoaderView)
-        view.background = getDrawable(R.drawable.error)
+        view.background = getDrawable(R.drawable.error_icon)
     }
 
     private fun showProgressBar() {

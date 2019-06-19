@@ -16,7 +16,7 @@
     <string name="dz2ButtonStr">DZ2</string>
     <string name="dz2LoginButtonStr">DZ2Login</string>
 
-    <string name="imageURL">https://i.imgur.com/H981AN7.jpg</string>
+    <string name="imageURL">http://i.imgur.com/H981AN7.jpg</string>
     <string name="buttonLoad">LOAD IMAGE</string>
 
 </resources>

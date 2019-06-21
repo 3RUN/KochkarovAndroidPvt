@@ -9,6 +9,7 @@ import by.itacademy.pvt.dz0.Dz0Activity
 import by.itacademy.pvt.dz1.Dz1Activity
 import by.itacademy.pvt.dz2.Dz2Activity
 import by.itacademy.pvt.dz2.Dz2LoginActivity
+import by.itacademy.pvt.dz3.Dz3Activity
 
 class MenuActivity : Activity(), View.OnClickListener {
 
@@ -36,6 +37,11 @@ class MenuActivity : Activity(), View.OnClickListener {
             .setOnClickListener {
                 onClick(findViewById(R.id.dz2LoginButtonId))
             }
+
+        findViewById<View>(R.id.dz3ButtonId)
+            .setOnClickListener {
+                onClick(findViewById(R.id.dz3ButtonId))
+            }
     }
 
     override fun onClick(p0: View?) {
@@ -55,6 +61,10 @@ class MenuActivity : Activity(), View.OnClickListener {
             }
             R.id.dz2LoginButtonId -> {
                 val intent = Intent(this, Dz2LoginActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.dz3ButtonId -> {
+                val intent = Intent(this, Dz3Activity::class.java)
                 startActivity(intent)
             }
         }

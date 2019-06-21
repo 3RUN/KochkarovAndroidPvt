@@ -40,7 +40,7 @@
     <dimen name="Dz3NotificationMarginTop">24dp</dimen>
 
     <dimen name="Dz3TextNameMarginLeft">16dp</dimen>
-    <dimen name="Dz3TextNameMarginTop">162dp</dimen>
+    <dimen name="Dz3TextNameMarginTop">146dp</dimen>
     <dimen name="Dz3TextNameScale">24sp</dimen>
 
     <dimen name="Dz3TextMarginStart">16dp</dimen>
@@ -51,7 +51,10 @@
     <dimen name="Dz3TextUseInfoMarginTop">40dp</dimen>
     <dimen name="Dz3TextUseInfoTextSize">18sp</dimen>
 
+    <dimen name="Dz3ImageHeightWeight">128dp</dimen>
     <dimen name="Dz3LineMargin">8dp</dimen>
     <dimen name="Dz3LineHeight">1dp</dimen>
+    <dimen name="Dz3FrameMarginLeft">24dp</dimen>
+    <dimen name="Dz3FrameMarginTop">100dp</dimen>
 
 </resources>

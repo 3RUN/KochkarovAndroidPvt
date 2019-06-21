@@ -1,285 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/border_background"
-    android:orientation="vertical"
-    android:padding="16dip">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/dz3Black"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/backgroundId"
-            style="@style/Dz3Notification" />
-
-        <FrameLayout
-            android:id="@+id/imageFrameId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="100dp">
-
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="@dimen/progressBarWidth"
-                android:minHeight="@dimen/progressBarHeight"
-                android:visibility="visible" />
-
-            <ImageView
-                android:id="@+id/imageLoaderView"
-                android:layout_width="128dp"
-                android:layout_height="128dp"
-                android:scaleType="centerCrop" />
-
-        </FrameLayout>
-
-        <TextView
-            style="@style/Dz3FullNameText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imageFrameId"
-            android:fontFamily="@font/monda_bold" />
-
-    </RelativeLayout>
+    android:fillViewport="true">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/dz3Black"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/monda_regular"
-            android:gravity="center"
-            android:text="Trophies"
-            android:textColor="@color/dz3Gray"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/monda_regular"
-            android:gravity="center"
-            android:text="Following"
-            android:textColor="@color/dz3Gray"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/monda_regular"
-            android:gravity="center"
-            android:text="Followers"
-            android:textColor="@color/dz3Gray"
-            android:textSize="16sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/dz3Black"
-        android:orientation="horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/monda_bold"
-            android:gravity="center"
-            android:padding="1dp"
-            android:text="4"
-            android:textColor="@color/dz3Yellow"
-            android:textSize="24sp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/monda_bold"
-            android:gravity="center"
-            android:padding="1dp"
-            android:text="54"
-            android:textColor="@color/dz3Yellow"
-            android:textSize="24sp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/monda_bold"
-            android:gravity="center"
-            android:padding="1dp"
-            android:text="12"
-            android:textColor="@color/dz3Yellow"
-            android:textSize="24sp" />
-
-    </LinearLayout>
-
-    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dz3Black">
+        android:background="@drawable/border_background"
+        android:orientation="vertical"
+        android:padding="16dip">
 
-        <View
-            android:id="@+id/lineId"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/Dz3LineHeight"
-            android:layout_marginLeft="@dimen/Dz3LineMargin"
-            android:layout_marginTop="@dimen/Dz3LineMargin"
-            android:layout_marginRight="@dimen/Dz3LineMargin"
-            android:background="@color/dz3Gray" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dz3Black"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/backgroundId"
+                style="@style/Dz3Notification" />
+
+            <FrameLayout
+                android:id="@+id/imageFrameId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/Dz3FrameMarginLeft"
+                android:layout_marginTop="@dimen/Dz3FrameMarginTop">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/progressBarWidth"
+                    android:minHeight="@dimen/progressBarHeight"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/imageLoaderView"
+                    style="@style/Dz3ImageView" />
+
+            </FrameLayout>
+
+            <TextView
+                style="@style/Dz3FullNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imageFrameId"
+                android:fontFamily="@font/monda_bold" />
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dz3Black"
             android:orientation="horizontal">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+            <TextView
+                style="@style/Dz3Tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Dz3TabTrophies" />
 
-                <TextView
-                    android:id="@+id/nameFieldId"
-                    style="@style/Dz3TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:text="@string/dz3UserFullName" />
+            <TextView
+                style="@style/Dz3Tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Dz3TabFollowing" />
 
-                <TextView
-                    android:id="@+id/countryFieldId"
-                    style="@style/Dz3TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nameFieldId"
-                    android:text="@string/dz3UserCountry" />
-
-                <TextView
-                    android:id="@+id/postalFieldId"
-                    style="@style/Dz3TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/countryFieldId"
-                    android:text="@string/dz3UserPostal" />
-
-                <TextView
-                    android:id="@+id/birthFieldId"
-                    style="@style/Dz3TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/postalFieldId"
-                    android:text="@string/dz3UserBirth" />
-
-                <TextView
-                    android:id="@+id/genderFieldId"
-                    style="@style/Dz3TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/birthFieldId"
-                    android:text="@string/dz3UserGender" />
-
-                <TextView
-                    android:id="@+id/heightFieldId"
-                    style="@style/Dz3TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/genderFieldId"
-                    android:text="@string/dz3UserHeight" />
-
-                <TextView
-                    android:id="@+id/phoneFieldId"
-                    style="@style/Dz3TextField"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/heightFieldId"
-                    android:text="@string/dz3UserPhone" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/nameTextId"
-                    style="@style/Dz3TextFieldUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:text="@string/dz3UserFullNameInfo" />
-
-                <TextView
-                    android:id="@+id/countryTextId"
-                    style="@style/Dz3TextFieldUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nameTextId"
-                    android:text="@string/dz3UserCountryInfo" />
-
-                <TextView
-                    android:id="@+id/postalTextId"
-                    style="@style/Dz3TextFieldUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/countryTextId"
-                    android:text="@string/dz3UserPostalInfo" />
-
-                <TextView
-                    android:id="@+id/birthTextId"
-                    style="@style/Dz3TextFieldUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/postalTextId"
-                    android:text="@string/dz3UserBirthInfo" />
-
-                <TextView
-                    android:id="@+id/genderTextId"
-                    style="@style/Dz3TextFieldUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/birthTextId"
-                    android:text="@string/dz3UserGenderInfo" />
-
-                <TextView
-                    android:id="@+id/heightTextId"
-                    style="@style/Dz3TextFieldUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/genderTextId"
-                    android:text="@string/dz3UserHeightInfo" />
-
-                <TextView
-                    android:id="@+id/phoneTextId"
-                    style="@style/Dz3TextFieldUser"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/heightTextId"
-                    android:text="@string/dz3UserPhoneInfo" />
-
-            </RelativeLayout>
+            <TextView
+                style="@style/Dz3Tabs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Dz3TabFollowers" />
 
         </LinearLayout>
 
-    </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dz3Black"
+            android:orientation="horizontal">
 
-</LinearLayout>
+            <Button
+                style="@style/Dz3ButtonDigit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Dz3Trophies" />
+
+            <Button
+                style="@style/Dz3ButtonDigit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Dz3Following" />
+
+            <Button
+                style="@style/Dz3ButtonDigit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Dz3Followers" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dz3Black">
+
+            <View
+                android:id="@+id/lineId"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/Dz3LineHeight"
+                android:layout_marginLeft="@dimen/Dz3LineMargin"
+                android:layout_marginTop="@dimen/Dz3LineMargin"
+                android:layout_marginRight="@dimen/Dz3LineMargin"
+                android:background="@color/dz3Gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameFieldId"
+                        style="@style/Dz3TextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/dz3UserFullName" />
+
+                    <TextView
+                        android:id="@+id/countryFieldId"
+                        style="@style/Dz3TextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/nameFieldId"
+                        android:text="@string/dz3UserCountry" />
+
+                    <TextView
+                        android:id="@+id/postalFieldId"
+                        style="@style/Dz3TextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/countryFieldId"
+                        android:text="@string/dz3UserPostal" />
+
+                    <TextView
+                        android:id="@+id/birthFieldId"
+                        style="@style/Dz3TextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/postalFieldId"
+                        android:text="@string/dz3UserBirth" />
+
+                    <TextView
+                        android:id="@+id/genderFieldId"
+                        style="@style/Dz3TextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/birthFieldId"
+                        android:text="@string/dz3UserGender" />
+
+                    <TextView
+                        android:id="@+id/heightFieldId"
+                        style="@style/Dz3TextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/genderFieldId"
+                        android:text="@string/dz3UserHeight" />
+
+                    <TextView
+                        android:id="@+id/phoneFieldId"
+                        style="@style/Dz3TextField"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/heightFieldId"
+                        android:text="@string/dz3UserPhone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/nameTextId"
+                        style="@style/Dz3TextFieldUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/dz3UserFullNameInfo" />
+
+                    <TextView
+                        android:id="@+id/countryTextId"
+                        style="@style/Dz3TextFieldUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/nameTextId"
+                        android:text="@string/dz3UserCountryInfo" />
+
+                    <TextView
+                        android:id="@+id/postalTextId"
+                        style="@style/Dz3TextFieldUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/countryTextId"
+                        android:text="@string/dz3UserPostalInfo" />
+
+                    <TextView
+                        android:id="@+id/birthTextId"
+                        style="@style/Dz3TextFieldUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/postalTextId"
+                        android:text="@string/dz3UserBirthInfo" />
+
+                    <TextView
+                        android:id="@+id/genderTextId"
+                        style="@style/Dz3TextFieldUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/birthTextId"
+                        android:text="@string/dz3UserGenderInfo" />
+
+                    <TextView
+                        android:id="@+id/heightTextId"
+                        style="@style/Dz3TextFieldUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/genderTextId"
+                        android:text="@string/dz3UserHeightInfo" />
+
+                    <TextView
+                        android:id="@+id/phoneTextId"
+                        style="@style/Dz3TextFieldUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/heightTextId"
+                        android:text="@string/dz3UserPhoneInfo" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

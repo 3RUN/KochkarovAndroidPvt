@@ -17,24 +17,29 @@ class MenuActivity : Activity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        findViewById<View>(R.id.dzButtonId)
+        val dz0Button = findViewById<View>(R.id.dzButtonId)
+        val dz1Button = findViewById<View>(R.id.dz1ButtonId)
+        val dz2Button = findViewById<View>(R.id.dz2ButtonId)
+        val dz2LoginButton = findViewById<View>(R.id.dz2LoginButtonId)
+
+        dz0Button
             .setOnClickListener {
-                onClick(findViewById(R.id.dzButtonId))
+                onClick(dz0Button)
             }
 
-        findViewById<View>(R.id.dz1ButtonId)
+        dz1Button
             .setOnClickListener {
-                onClick(findViewById(R.id.dz1ButtonId))
+                onClick(dz1Button)
             }
 
-        findViewById<View>(R.id.dz2ButtonId)
+        dz2Button
             .setOnClickListener {
-                onClick(findViewById(R.id.dz2ButtonId))
+                onClick(dz2Button)
             }
 
-        findViewById<View>(R.id.dz2LoginButtonId)
+        dz2LoginButton
             .setOnClickListener {
-                onClick(findViewById(R.id.dz2LoginButtonId))
+                onClick(dz2LoginButton)
             }
     }
 

@@ -45,6 +45,13 @@
             android:layout_height="wrap_content"
             android:text="@string/dz3ButtonStr" />
 
+        <Button
+            android:id="@+id/dz4ButtonId"
+            style="@style/DzMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dz4ButtonStr" />
+
     </LinearLayout>
 
 </ScrollView>

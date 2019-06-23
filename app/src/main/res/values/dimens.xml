@@ -61,4 +61,20 @@
     <dimen name="Dz3FrameMarginLeft">24dp</dimen>
     <dimen name="Dz3FrameMarginTop">100dp</dimen>
 
+    <dimen name="Dz4ClockCircleWidth">6dp</dimen>
+    <dimen name="Dz4ClockCirclePadding">24dp</dimen>
+    <dimen name="Dz4ClockCenterDotRadius">12dp</dimen>
+
+    <dimen name="Dz4ClockLineMainLength">24dp</dimen>
+    <dimen name="Dz4ClockLineMainWidth">12dp</dimen>
+
+    <dimen name="Dz4ClockLinesLength">16dp</dimen>
+    <dimen name="Dz4ClockLinesWidth">6dp</dimen>
+
+    <dimen name="Dz4ClockNumberTextSize">32sp</dimen>
+    <dimen name="Dz4ClockNumberTextPaddings">32dp</dimen>
+    <dimen name="Dz4ClockHandHourWidth">12dp</dimen>
+    <dimen name="Dz4ClockHandMinuteWidth">6dp</dimen>
+    <dimen name="Dz4ClockHandSecondWidth">2dp</dimen>
+
 </resources>

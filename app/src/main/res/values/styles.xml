@@ -8,6 +8,13 @@
         <item name="colorAccent">@android:color/white</item>
     </style>
 
+    <style name="DzMenuButton">
+        <item name="android:layout_marginTop">@dimen/dzMenuButtonMarginTop</item>
+        <item name="android:padding">@dimen/dzMenuButtonPadding</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/dzMenuButtonTextSize</item>
+    </style>
+
     <style name="LoginEditText">
         <item name="android:background">#40808080</item>
         <item name="android:textColor">@android:color/white</item>

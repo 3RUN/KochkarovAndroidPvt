@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">KochkarovAndroidPvt</string>
 
+    <string name="dzButtonStr">DZ0</string>
+    <string name="dz1ButtonStr">DZ1</string>
+    <string name="dz2ButtonStr">DZ2</string>
+    <string name="dz2LoginButtonStr">DZ2Login</string>
+    <string name="dz3ButtonStr">DZ3</string>
+
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>
     <string name="textButton">Click Me</string>
@@ -10,12 +16,6 @@
     <string name="dz2LoginLogin">LOG IN</string>
     <string name="dz2LoginForgot"><u>Forgot your username/password?</u></string>
     <string name="dz2LoginCreate">CREATE ACCOUNT</string>
-
-    <string name="dzButtonStr">DZ0</string>
-    <string name="dz1ButtonStr">DZ1</string>
-    <string name="dz2ButtonStr">DZ2</string>
-    <string name="dz2LoginButtonStr">DZ2Login</string>
-    <string name="dz3ButtonStr">DZ3</string>
 
     <string name="dz3UserFullName">Name</string>
     <string name="dz3UserCountry">Country</string>

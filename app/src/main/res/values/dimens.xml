@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="dzMenuButtonMarginTop">20dp</dimen>
+    <dimen name="dzMenuButtonPadding">10dp</dimen>
+    <dimen name="dzMenuButtonTextSize">25sp</dimen>
+
     <dimen name="loginationEditTextSize">22sp</dimen>
 
     <dimen name="logoMarginTop">96dp</dimen>

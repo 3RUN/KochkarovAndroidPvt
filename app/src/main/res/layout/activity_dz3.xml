@@ -30,6 +30,8 @@
 
                 <ProgressBar
                     android:id="@+id/progressBar"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="40dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minWidth="@dimen/progressBarWidth"

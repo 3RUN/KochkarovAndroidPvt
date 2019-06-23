@@ -12,48 +12,38 @@
 
         <Button
             android:id="@+id/dzButtonId"
+            style="@style/DzMenuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/dzButtonStr"
-            android:textSize="25sp" />
+            android:text="@string/dzButtonStr" />
 
         <Button
             android:id="@+id/dz1ButtonId"
+            style="@style/DzMenuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/dz1ButtonStr"
-            android:textSize="25sp" />
+            android:text="@string/dz1ButtonStr" />
 
         <Button
             android:id="@+id/dz2ButtonId"
+            style="@style/DzMenuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/dz2ButtonStr"
-            android:textSize="25sp" />
+            android:text="@string/dz2ButtonStr" />
 
         <Button
             android:id="@+id/dz2LoginButtonId"
+            style="@style/DzMenuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/dz2LoginButtonStr"
-            android:textSize="25sp" />
+            android:text="@string/dz2LoginButtonStr" />
 
         <Button
             android:id="@+id/dz3ButtonId"
+            style="@style/DzMenuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimary"
-            android:text="@string/dz3ButtonStr"
-            android:textSize="25sp" />
+            android:text="@string/dz3ButtonStr" />
 
     </LinearLayout>
 

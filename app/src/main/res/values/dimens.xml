@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="loginationEditTextSize">22sp</dimen>
+
+    <dimen name="logoMarginTop">96dp</dimen>
+
+    <dimen name="editTextMarginStart">32dp</dimen>
+    <dimen name="editTextMarginEnd">32dp</dimen>
+    <dimen name="editTextPaddingStart">16dp</dimen>
+    <dimen name="editTextPaddingTop">16dp</dimen>
+    <dimen name="editTextPaddingBottom">16dp</dimen>
+    <dimen name="editTextDrawablePadding">16dp</dimen>
+
+    <dimen name="buttonMarginStart">32dp</dimen>
+    <dimen name="buttonMarginEnd">32dp</dimen>
+    <dimen name="buttonPaddingTop">16dp</dimen>
+    <dimen name="buttonPaddingBottom">16dp</dimen>
+    <dimen name="buttonPaddingStart">16dp</dimen>
+    <dimen name="buttonPaddingEnd">16dp</dimen>
+
+    <dimen name="loginEditTextMarginTop">64dp</dimen>
+    <dimen name="passwordEditTextMarginTop">96dp</dimen>
+
+    <dimen name="loginTextSize">24sp</dimen>
+    <dimen name="loginButtonMarginTop">112dp</dimen>
+
+    <dimen name="forgotTextSize">18sp</dimen>
+    <dimen name="forgotMarginTop">72dp</dimen>
+
+    <dimen name="dz2UrlScale">14sp</dimen>
+    <dimen name="dz2UrlMarginTop">48dp</dimen>
 </resources>

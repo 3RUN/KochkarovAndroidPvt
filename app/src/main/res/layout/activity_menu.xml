@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/dzButton"
+            android:id="@+id/dzButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -20,12 +20,30 @@
             android:textSize="25sp" />
 
         <Button
-            android:id="@+id/dzOneButton"
+            android:id="@+id/dz1ButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
-            android:text="@string/dzOneButtonStr"
+            android:text="@string/dz1ButtonStr"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/dz2ButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/dz2ButtonStr"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/dz2LoginButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/dz2LoginButtonStr"
             android:textSize="25sp" />
 
     </LinearLayout>

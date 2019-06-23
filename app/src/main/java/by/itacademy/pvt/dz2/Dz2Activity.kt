@@ -16,6 +16,7 @@ class Dz2Activity : Activity() {
         setContentView(R.layout.activity_dz2)
 
         val image = findViewById<View>(R.id.imageLoaderView)
+        val editTextView = findViewById<EditText>(R.id.urlEditText)
 
         findViewById<View>(R.id.loadButton)
             .setOnClickListener {
@@ -27,7 +28,6 @@ class Dz2Activity : Activity() {
                 // or previously loaded background
                 image.background = null
 
-                val editTextView = findViewById<EditText>(R.id.urlEditText)
                 val url = editTextView.text.toString()
 
                 Picasso.get()

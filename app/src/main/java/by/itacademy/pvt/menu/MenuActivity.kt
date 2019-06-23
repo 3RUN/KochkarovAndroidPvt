@@ -47,7 +47,6 @@ class MenuActivity : Activity(), View.OnClickListener {
         dz3Button
             .setOnClickListener {
                 onClick(dz3Button)
-            }
     }
 
     override fun onClick(v: View?) {

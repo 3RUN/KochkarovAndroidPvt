@@ -44,7 +44,6 @@ class Dz4ClockView : View {
         clockCenterDotPaint.color = ContextCompat.getColor(context, R.color.dz3White)
         clockCenterDotPaint.style = Paint.Style.FILL
 
-        clockLinesPaint.color = ContextCompat.getColor(context, R.color.dz3White)
         clockLinesPaint.style = Paint.Style.STROKE
         clockLinesPaint.strokeWidth = 16f
 
@@ -52,15 +51,15 @@ class Dz4ClockView : View {
         clockNumberPaint.style = Paint.Style.FILL
         clockNumberPaint.textSize = resources.getDimension(R.dimen.Dz4ClockNumberTextSize)
 
-        handHourPaint.color = ContextCompat.getColor(context, R.color.dz3White)
+        handHourPaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
         handHourPaint.style = Paint.Style.STROKE
         handHourPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockHandHourWidth)
 
-        handMinutePaint.color = ContextCompat.getColor(context, R.color.dz3White)
+        handMinutePaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
         handMinutePaint.style = Paint.Style.STROKE
         handMinutePaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockHandMinuteWidth)
 
-        handSecondPaint.color = ContextCompat.getColor(context, R.color.dz3White)
+        handSecondPaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
         handSecondPaint.style = Paint.Style.STROKE
         handSecondPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockHandSecondWidth)
     }
@@ -85,9 +84,11 @@ class Dz4ClockView : View {
             if (i == 0 || i == 3 || i == 6 || i == 9) {
                 sizeOffset = resources.getDimension(R.dimen.Dz4ClockLineMainLength)
                 clockLinesPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockLineMainWidth)
+                clockLinesPaint.color = ContextCompat.getColor(context, R.color.dz3White)
             } else {
                 sizeOffset = resources.getDimension(R.dimen.Dz4ClockLinesLength)
                 clockLinesPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockLinesWidth)
+                clockLinesPaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
             }
             val startPosY = (screenCenterHeight - clockCircleRadius)
             val endPosY = (screenCenterHeight - clockCircleRadius) + sizeOffset

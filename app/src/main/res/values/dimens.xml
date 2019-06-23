@@ -30,4 +30,31 @@
 
     <dimen name="dz2UrlScale">14sp</dimen>
     <dimen name="dz2UrlMarginTop">48dp</dimen>
+
+    <dimen name="progressBarWidth">50dp</dimen>
+    <dimen name="progressBarHeight">50dp</dimen>
+
+    <dimen name="Dz3NotificationWidth">32dp</dimen>
+    <dimen name="Dz3NotificationHeight">32dp</dimen>
+    <dimen name="Dz3NotificationMarginLeft">16dp</dimen>
+    <dimen name="Dz3NotificationMarginTop">24dp</dimen>
+
+    <dimen name="Dz3TextNameMarginLeft">16dp</dimen>
+    <dimen name="Dz3TextNameMarginTop">146dp</dimen>
+    <dimen name="Dz3TextNameScale">24sp</dimen>
+
+    <dimen name="Dz3TextMarginStart">16dp</dimen>
+    <dimen name="Dz3TextMarginTop">40dp</dimen>
+    <dimen name="Dz3TextTextSize">18sp</dimen>
+
+    <dimen name="Dz3TextUseInfoMarginStart">2dp</dimen>
+    <dimen name="Dz3TextUseInfoMarginTop">40dp</dimen>
+    <dimen name="Dz3TextUseInfoTextSize">18sp</dimen>
+
+    <dimen name="Dz3ImageHeightWeight">128dp</dimen>
+    <dimen name="Dz3LineMargin">8dp</dimen>
+    <dimen name="Dz3LineHeight">1dp</dimen>
+    <dimen name="Dz3FrameMarginLeft">24dp</dimen>
+    <dimen name="Dz3FrameMarginTop">100dp</dimen>
+
 </resources>

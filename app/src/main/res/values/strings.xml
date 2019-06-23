@@ -15,6 +15,31 @@
     <string name="dz1ButtonStr">DZ1</string>
     <string name="dz2ButtonStr">DZ2</string>
     <string name="dz2LoginButtonStr">DZ2Login</string>
+    <string name="dz3ButtonStr">DZ3</string>
+
+    <string name="dz3UserFullName">Name</string>
+    <string name="dz3UserCountry">Country</string>
+    <string name="dz3UserPostal">Postal code</string>
+    <string name="dz3UserBirth">Date of birth</string>
+    <string name="dz3UserGender">Gender</string>
+    <string name="dz3UserHeight">Height</string>
+    <string name="dz3UserPhone">Phone</string>
+
+    <string name="dz3UserFullNameInfo">Nial Brockman</string>
+    <string name="dz3UserCountryInfo">USA</string>
+    <string name="dz3UserPostalInfo">60604</string>
+    <string name="dz3UserBirthInfo">Feb. 21, 2000</string>
+    <string name="dz3UserGenderInfo">Male</string>
+    <string name="dz3UserHeightInfo">6\'1\"</string>
+    <string name="dz3UserPhoneInfo">(781) 547-3320</string>
+
+    <string name="Dz3TabTrophies">Trophies</string>
+    <string name="Dz3TabFollowing">Following</string>
+    <string name="Dz3TabFollowers">Followers</string>
+
+    <string name="Dz3Trophies">4</string>
+    <string name="Dz3Following">54</string>
+    <string name="Dz3Followers">12</string>
 
     <string name="imageURL">http://i.imgur.com/H981AN7.jpg</string>
     <string name="buttonLoad">LOAD IMAGE</string>

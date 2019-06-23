@@ -46,6 +46,15 @@
             android:text="@string/dz2LoginButtonStr"
             android:textSize="25sp" />
 
+        <Button
+            android:id="@+id/dz3ButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/dz3ButtonStr"
+            android:textSize="25sp" />
+
     </LinearLayout>
 
 </ScrollView>

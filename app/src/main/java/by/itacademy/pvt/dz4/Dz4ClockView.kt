@@ -138,7 +138,7 @@ class Dz4ClockView : View {
         val c = Calendar.getInstance()
         var hour = c.get(Calendar.HOUR_OF_DAY)
         hour = if (hour > 12) hour - 12 else hour
-        drawHand(canvas, handHourPaint, ((hour + c.get(Calendar.MINUTE) / 60) * 5).toDouble(), true)
+        drawHand(canvas, handHourPaint, ((hour + c.get(Calendar.MINUTE) / 60.0) * 5), true)
         drawHand(canvas, handMinutePaint, c.get(Calendar.MINUTE).toDouble(), false)
         drawHand(canvas, handSecondPaint, c.get(Calendar.SECOND).toDouble(), false)
     }

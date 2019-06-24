@@ -20,15 +20,20 @@ class Dz4ClockView : View {
     private var clockCircleX = 0f
     private var clockCircleY = 0f
     private var clockCircleRadius = 0f
-    private var clockCirclePadding = resources.getDimension(R.dimen.Dz4ClockCirclePadding)
+    private var clockCirclePadding = 0f
 
     private val clockCenterDotPaint = Paint(Paint.ANTI_ALIAS_FLAG)
-    private val clockCenterDotRadius = resources.getDimension(R.dimen.Dz4ClockCenterDotRadius)
+    private var clockCenterDotRadius = 0f
 
     private val clockLinesPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+    private var clockLinesMainWidth = 0f
+    private var clockLinesMainLength = 0f
+    private var clockLinesWidth = 0f
+    private var clockLinesLength = 0f
 
     private val clockNumbers = intArrayOf(3, 6, 9, 12)
     private val clockNumberPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+    private var clockNumberPadding = 0f
 
     private val handHourPaint = Paint(Paint.ANTI_ALIAS_FLAG)
     private val handMinutePaint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -39,29 +44,37 @@ class Dz4ClockView : View {
     init {
         clockCirclePaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
         clockCirclePaint.style = Paint.Style.STROKE
-        clockCirclePaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockCircleWidth)
+        clockCirclePaint.strokeWidth = resources.getDimension(R.dimen.dz4ClockCircleWidth)
+        clockCirclePadding = resources.getDimension(R.dimen.dz4ClockCirclePadding)
 
         clockCenterDotPaint.color = ContextCompat.getColor(context, R.color.dz3White)
         clockCenterDotPaint.style = Paint.Style.FILL
+        clockCenterDotRadius = resources.getDimension(R.dimen.dz4ClockCenterDotRadius)
 
         clockLinesPaint.style = Paint.Style.STROKE
-        clockLinesPaint.strokeWidth = 16f
+        clockLinesPaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
+
+        clockLinesMainLength = resources.getDimension(R.dimen.dz4ClockLineMainLength)
+        clockLinesMainWidth = resources.getDimension(R.dimen.dz4ClockLineMainWidth)
+        clockLinesLength = resources.getDimension(R.dimen.dz4ClockLinesLength)
+        clockLinesWidth = resources.getDimension(R.dimen.dz4ClockLinesWidth)
 
         clockNumberPaint.color = ContextCompat.getColor(context, R.color.dz3White)
         clockNumberPaint.style = Paint.Style.FILL
-        clockNumberPaint.textSize = resources.getDimension(R.dimen.Dz4ClockNumberTextSize)
+        clockNumberPaint.textSize = resources.getDimension(R.dimen.dz4ClockNumberTextSize)
+        clockNumberPadding = resources.getDimension(R.dimen.dz4ClockNumberTextPaddings)
 
         handHourPaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
         handHourPaint.style = Paint.Style.STROKE
-        handHourPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockHandHourWidth)
+        handHourPaint.strokeWidth = resources.getDimension(R.dimen.dz4ClockHandHourWidth)
 
         handMinutePaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
         handMinutePaint.style = Paint.Style.STROKE
-        handMinutePaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockHandMinuteWidth)
+        handMinutePaint.strokeWidth = resources.getDimension(R.dimen.dz4ClockHandMinuteWidth)
 
         handSecondPaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
         handSecondPaint.style = Paint.Style.STROKE
-        handSecondPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockHandSecondWidth)
+        handSecondPaint.strokeWidth = resources.getDimension(R.dimen.dz4ClockHandSecondWidth)
     }
 
     constructor(context: Context?) : super(context)
@@ -82,13 +95,11 @@ class Dz4ClockView : View {
         canvas.save()
         for (i in 0..11) {
             if (i == 0 || i == 3 || i == 6 || i == 9) {
-                sizeOffset = resources.getDimension(R.dimen.Dz4ClockLineMainLength)
-                clockLinesPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockLineMainWidth)
-                clockLinesPaint.color = ContextCompat.getColor(context, R.color.dz3White)
+                sizeOffset = clockLinesMainLength
+                clockLinesPaint.strokeWidth = clockLinesMainWidth
             } else {
-                sizeOffset = resources.getDimension(R.dimen.Dz4ClockLinesLength)
-                clockLinesPaint.strokeWidth = resources.getDimension(R.dimen.Dz4ClockLinesWidth)
-                clockLinesPaint.color = ContextCompat.getColor(context, R.color.dz3Gray)
+                sizeOffset = clockLinesLength
+                clockLinesPaint.strokeWidth = clockLinesWidth
             }
             val startPosY = (screenCenterHeight - clockCircleRadius)
             val endPosY = (screenCenterHeight - clockCircleRadius) + sizeOffset
@@ -99,7 +110,7 @@ class Dz4ClockView : View {
     }
 
     private fun drawNumbers(canvas: Canvas) {
-        val radius = clockCircleRadius - clockCirclePadding - resources.getDimension(R.dimen.Dz4ClockNumberTextPaddings)
+        val radius = clockCircleRadius - clockCirclePadding - clockNumberPadding
         for (number in clockNumbers) {
             val tmp = number.toString()
             clockNumberPaint.getTextBounds(tmp, 0, tmp.length, rect)

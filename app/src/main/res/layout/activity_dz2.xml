@@ -4,44 +4,59 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_blue_dark"
-        android:gravity="center"
         android:orientation="vertical">
 
-        <ProgressBar
-            android:id="@+id/progressBar"
+        <FrameLayout
+            android:id="@+id/imageFrameId"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="50dp"
-            android:minHeight="50dp"
-            android:visibility="gone" />
+            android:layout_marginLeft="@dimen/dz3FrameMarginLeft"
+            android:layout_marginTop="@dimen/dz3FrameMarginTop">
 
-        <ImageView
-            android:id="@+id/imageLoaderView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minWidth="50dp"
+                android:minHeight="50dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageLoaderView"
+                android:layout_width="@dimen/dz2ImageHeightWeight"
+                android:layout_height="@dimen/dz2ImageHeightWeight"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+
+        </FrameLayout>
 
         <EditText
             android:id="@+id/urlEditText"
             style="@style/UrlEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageFrameId"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dz2UrlMarginTop"
-            android:inputType="text"
+            android:inputType="textUri"
             android:text="@string/imageURL" />
 
         <Button
+            android:layout_alignTop="@+id/urlEditText"
             android:id="@+id/loadButton"
             style="@style/UrlLoadButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
             android:text="@string/buttonLoad" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>

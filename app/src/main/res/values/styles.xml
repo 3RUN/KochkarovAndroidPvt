@@ -93,38 +93,38 @@
     </style>
 
     <style name="Dz3Notification">
-        <item name="android:layout_width">@dimen/Dz3NotificationWidth</item>
-        <item name="android:layout_height">@dimen/Dz3NotificationHeight</item>
-        <item name="android:layout_marginLeft">@dimen/Dz3NotificationMarginLeft</item>
-        <item name="android:layout_marginTop">@dimen/Dz3NotificationMarginTop</item>
+        <item name="android:layout_width">@dimen/dz3NotificationWidth</item>
+        <item name="android:layout_height">@dimen/dz3NotificationHeight</item>
+        <item name="android:layout_marginLeft">@dimen/dz3NotificationMarginLeft</item>
+        <item name="android:layout_marginTop">@dimen/dz3NotificationMarginTop</item>
         <item name="android:src">@drawable/ic_notifications_black_24dp</item>
         <item name="android:tint">@color/dz3White</item>
     </style>
 
     <style name="Dz3FullNameText">
-        <item name="android:layout_marginLeft">@dimen/Dz3TextNameMarginLeft</item>
-        <item name="android:layout_marginTop">@dimen/Dz3TextNameMarginTop</item>
+        <item name="android:layout_marginLeft">@dimen/dz3TextNameMarginLeft</item>
+        <item name="android:layout_marginTop">@dimen/dz3TextNameMarginTop</item>
         <item name="android:text">Dylan Conner</item>
         <item name="android:textColor">@color/dz3White</item>
-        <item name="android:textSize">@dimen/Dz3TextNameScale</item>
+        <item name="android:textSize">@dimen/dz3TextNameScale</item>
     </style>
 
     <style name="Dz3TextField">
-        <item name="android:layout_marginStart">@dimen/Dz3TextMarginStart</item>
-        <item name="android:layout_marginTop">@dimen/Dz3TextMarginTop</item>
+        <item name="android:layout_marginStart">@dimen/dz3TextMarginStart</item>
+        <item name="android:layout_marginTop">@dimen/dz3TextMarginTop</item>
         <item name="android:fontFamily">@font/monda_regular</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/dz3Gray</item>
-        <item name="android:textSize">@dimen/Dz3TextTextSize</item>
+        <item name="android:textSize">@dimen/dz3TextTextSize</item>
     </style>
 
     <style name="Dz3TextFieldUser">
-        <item name="android:layout_marginStart">@dimen/Dz3TextUseInfoMarginStart</item>
-        <item name="android:layout_marginTop">@dimen/Dz3TextUseInfoMarginTop</item>
+        <item name="android:layout_marginStart">@dimen/dz3TextUseInfoMarginStart</item>
+        <item name="android:layout_marginTop">@dimen/dz3TextUseInfoMarginTop</item>
         <item name="android:fontFamily">@font/monda_bold</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/dz3White</item>
-        <item name="android:textSize">@dimen/Dz3TextUseInfoTextSize</item>
+        <item name="android:textSize">@dimen/dz3TextUseInfoTextSize</item>
     </style>
 
     <style name="Dz3Tabs">
@@ -147,8 +147,8 @@
     </style>
 
     <style name="Dz3ImageView">
-        <item name="android:layout_width">@dimen/Dz3ImageHeightWeight</item>
-        <item name="android:layout_height">@dimen/Dz3ImageHeightWeight</item>
+        <item name="android:layout_width">@dimen/dz3ImageHeightWeight</item>
+        <item name="android:layout_height">@dimen/dz3ImageHeightWeight</item>
         <item name="android:scaleType">centerCrop</item>
     </style>
 

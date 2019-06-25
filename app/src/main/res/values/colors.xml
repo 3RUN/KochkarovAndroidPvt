@@ -9,4 +9,10 @@
     <color name="dz3Black">#000000</color>
     <color name="dz3Gray">#d4d3d3</color>
 
+    <color name="dz5Pie1">#448c9b</color>
+    <color name="dz5Pie2">#bda763</color>
+    <color name="dz5Pie3">#b17170</color>
+    <color name="dz5Pie4">#ac6226</color>
+    <color name="dz5Pie5">#ef3c5e</color>
+
 </resources>

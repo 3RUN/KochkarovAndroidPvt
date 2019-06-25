@@ -2,11 +2,10 @@ package by.itacademy.pvt.dz3
 
 import android.app.Activity
 import android.os.Bundle
-import by.itacademy.pvt.R
 import android.view.View
-import by.itacademy.pvt.dz2.CircleTransform
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
+import by.itacademy.pvt.R
+import by.itacademy.pvt.utils.ImageLoaderCallback
+import by.itacademy.pvt.utils.imageLoaderCircle
 import kotlinx.android.synthetic.main.activity_dz3.*
 
 class Dz3Activity : Activity() {
@@ -17,20 +16,17 @@ class Dz3Activity : Activity() {
 
         val url = getString(R.string.imageURL)
 
-        Picasso.get()
-            .load(url)
-            .transform(CircleTransform())
-            .into(imageLoaderView, object : Callback {
+        imageLoaderCircle(url, imageLoaderView, object : ImageLoaderCallback {
 
-                override fun onError(e: Exception) {
-                    hideProgressBar()
-                    setErrorImage()
-                }
+            override fun onError(e: Exception) {
+                hideProgressBar()
+                setErrorImage()
+            }
 
-                override fun onSuccess() {
-                    hideProgressBar()
-                }
-            })
+            override fun onSuccess() {
+                hideProgressBar()
+            }
+        })
     }
 
     private fun setErrorImage() {

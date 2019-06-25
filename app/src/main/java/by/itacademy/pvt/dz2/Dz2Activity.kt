@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import by.itacademy.pvt.R
-import com.squareup.picasso.Callback
-import com.squareup.picasso.Picasso
+import by.itacademy.pvt.utils.ImageLoaderCallback
+import by.itacademy.pvt.utils.imageLoaderCircle
 import kotlinx.android.synthetic.main.activity_dz2.*
 
 class Dz2Activity : Activity() {
@@ -30,20 +30,17 @@ class Dz2Activity : Activity() {
 
                 val url = editTextView.text.toString()
 
-                Picasso.get()
-                    .load(url)
-                    .transform(CircleTransform())
-                    .into(imageLoaderView, object : Callback {
+                imageLoaderCircle(url, imageLoaderView, object : ImageLoaderCallback {
 
-                        override fun onError(e: Exception) {
-                            hideProgressBar()
-                            setErrorImage()
-                        }
+                    override fun onError(e: Exception) {
+                        hideProgressBar()
+                        setErrorImage()
+                    }
 
-                        override fun onSuccess() {
-                            hideProgressBar()
-                        }
-                    })
+                    override fun onSuccess() {
+                        hideProgressBar()
+                    }
+                })
             }
     }
 

@@ -25,7 +25,12 @@ class Dz5PieView : View {
             R.color.dz5Pie2,
             R.color.dz5Pie3,
             R.color.dz5Pie4,
-            R.color.dz5Pie5
+            R.color.dz5Pie5,
+            R.color.dz5Pie6,
+            R.color.dz5Pie7,
+            R.color.dz5Pie8,
+            R.color.dz5Pie9,
+            R.color.dz5Pie10
         )
 
     private val textRect = Rect()

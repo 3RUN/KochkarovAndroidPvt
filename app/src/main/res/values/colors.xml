@@ -9,10 +9,15 @@
     <color name="dz3Black">#000000</color>
     <color name="dz3Gray">#d4d3d3</color>
 
-    <color name="dz5Pie1">#448c9b</color>
-    <color name="dz5Pie2">#bda763</color>
-    <color name="dz5Pie3">#b17170</color>
-    <color name="dz5Pie4">#ac6226</color>
-    <color name="dz5Pie5">#ef3c5e</color>
+    <color name="dz5Pie1">#2fc32f</color>
+    <color name="dz5Pie2">#b0dc0b</color>
+    <color name="dz5Pie3">#eab404</color>
+    <color name="dz5Pie4">#de672c</color>
+    <color name="dz5Pie5">#ec2e2e</color>
+    <color name="dz5Pie6">#d5429b</color>
+    <color name="dz5Pie7">#6f52b8</color>
+    <color name="dz5Pie8">#1c7cd5</color>
+    <color name="dz5Pie9">#56b9f7</color>
+    <color name="dz5Pie10">#0ae8eb</color>
 
 </resources>

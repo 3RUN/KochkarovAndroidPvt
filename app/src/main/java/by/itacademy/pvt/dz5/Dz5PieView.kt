@@ -83,13 +83,20 @@ class Dz5PieView : View {
         drawDiagram(canvas)
     }
 
-    fun drawConnection(canvas: Canvas, startX: Float, startY: Float, endX: Float, endY: Float, textWidth: Float) {
+    private fun drawConnection(
+        canvas: Canvas,
+        startX: Float,
+        startY: Float,
+        endX: Float,
+        endY: Float,
+        textWidth: Float
+    ) {
         canvas.drawLine(startX, startY, endX, endY, linePaint)
         val radiusCircle = textWidth * 1.25f
         canvas.drawCircle(endX, endY, radiusCircle, pointPaint)
     }
 
-    fun drawDiagram(canvas: Canvas) {
+    private fun drawDiagram(canvas: Canvas) {
         val dataSum = pieData.sum()
         var angleStart = 0f
         var angleSweep = 0f

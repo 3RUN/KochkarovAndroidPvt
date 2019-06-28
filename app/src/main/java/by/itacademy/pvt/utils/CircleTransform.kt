@@ -1,4 +1,4 @@
-package by.itacademy.pvt.dz2
+package by.itacademy.pvt.utils
 
 import com.squareup.picasso.Transformation
 import android.graphics.Color

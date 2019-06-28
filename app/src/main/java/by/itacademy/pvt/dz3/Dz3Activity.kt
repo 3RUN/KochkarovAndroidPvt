@@ -3,6 +3,7 @@ package by.itacademy.pvt.dz3
 import android.app.Activity
 import android.os.Bundle
 import android.view.View
+import androidx.core.content.ContextCompat
 import by.itacademy.pvt.R
 import by.itacademy.pvt.utils.ImageLoaderCallback
 import by.itacademy.pvt.utils.imageLoaderCircle
@@ -31,7 +32,7 @@ class Dz3Activity : Activity() {
 
     private fun setErrorImage() {
         val view = findViewById<View>(R.id.imageLoaderView)
-        view.background = getDrawable(R.drawable.error_icon)
+        view.background = ContextCompat.getDrawable(this, R.drawable.error_icon)
     }
 
     private fun hideProgressBar() {

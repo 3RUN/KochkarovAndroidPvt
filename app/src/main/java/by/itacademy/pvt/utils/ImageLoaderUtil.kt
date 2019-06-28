@@ -1,7 +1,6 @@
 package by.itacademy.pvt.utils
 
 import android.widget.ImageView
-import by.itacademy.pvt.dz2.CircleTransform
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 

@@ -8,12 +8,13 @@ import by.itacademy.pvt.R
 
 class Dz5OwlActivity : Activity() {
 
-    private val frameAnimation: AnimationDrawable =
-        findViewById<ImageView>(R.id.dz5OwlId).background as AnimationDrawable
+    private lateinit var frameAnimation: AnimationDrawable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz5owl)
+
+        frameAnimation = findViewById<ImageView>(R.id.dz5OwlId).background as AnimationDrawable
     }
 
     override fun onResume() {

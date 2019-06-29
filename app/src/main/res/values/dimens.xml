@@ -79,4 +79,7 @@
     <dimen name="dz4ClockHandMinuteWidth">6dp</dimen>
     <dimen name="dz4ClockHandSecondWidth">2dp</dimen>
 
+    <dimen name="dz5PieTextSize">24sp</dimen>
+    <dimen name="dz5PieLineWidth">4dp</dimen>
+
 </resources>

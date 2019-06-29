@@ -7,6 +7,8 @@
     <string name="dz2LoginButtonStr">DZ2Login</string>
     <string name="dz3ButtonStr">DZ3</string>
     <string name="dz4ButtonStr">DZ4</string>
+    <string name="dz5PieButtonStr">DZ5Pie</string>
+    <string name="dz5OwlButtonStr">DZ5Owl</string>
 
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>

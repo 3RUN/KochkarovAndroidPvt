@@ -52,6 +52,20 @@
             android:layout_height="wrap_content"
             android:text="@string/dz4ButtonStr" />
 
+        <Button
+            android:id="@+id/dz5PieButtonId"
+            style="@style/DzMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dz5PieButtonStr" />
+
+        <Button
+            android:id="@+id/dz5OwlButtonId"
+            style="@style/DzMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dz5OwlButtonStr" />
+
     </LinearLayout>
 
 </ScrollView>

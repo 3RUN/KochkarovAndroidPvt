@@ -11,18 +11,17 @@
         android:orientation="vertical">
 
         // poland + austria
-
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="144dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@android:color/holo_red_light">
 
             <View
                 android:id="@+id/poland"
-                android:layout_width="192dp"
-                android:layout_height="72dp"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
                 android:background="@android:color/white" />
 
             <View
@@ -34,8 +33,8 @@
 
             <View
                 android:id="@+id/austria"
-                android:layout_width="192dp"
-                android:layout_height="48dp"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/separatorOne"
                 android:background="@android:color/white" />
@@ -43,27 +42,26 @@
         </RelativeLayout>
 
         // denmark + thailand
-
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="144dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@android:color/holo_red_light">
 
             <View
                 android:id="@+id/denmarkOne"
-                android:layout_width="192dp"
-                android:layout_height="32dp"
+                android:layout_width="160dp"
+                android:layout_height="16dp"
                 android:layout_centerVertical="true"
                 android:background="@android:color/white" />
 
             <View
                 android:id="@+id/denmarkTwo"
-                android:layout_width="32dp"
-                android:layout_height="192dp"
+                android:layout_width="16dp"
+                android:layout_height="120dp"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="56dp"
+                android:layout_marginLeft="48dp"
                 android:background="@android:color/white" />
 
             <View
@@ -75,16 +73,16 @@
 
             <View
                 android:id="@+id/thailandOne"
-                android:layout_width="192dp"
-                android:layout_height="96dp"
+                android:layout_width="160dp"
+                android:layout_height="80dp"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/separatorTwo"
                 android:background="@android:color/white" />
 
             <View
                 android:id="@+id/thailandTwo"
-                android:layout_width="192dp"
-                android:layout_height="48dp"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/separatorTwo"
                 android:background="@android:color/holo_blue_dark" />
@@ -92,23 +90,22 @@
         </RelativeLayout>
 
         // italy + madagascar
-
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="144dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@android:color/holo_red_light">
 
             <View
                 android:id="@+id/italyOne"
-                android:layout_width="64dp"
+                android:layout_width="54dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/holo_green_dark" />
 
             <View
                 android:id="@+id/italyTwo"
-                android:layout_width="64dp"
+                android:layout_width="54dp"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/italyOne"
                 android:background="@android:color/white" />
@@ -117,32 +114,31 @@
                 android:id="@+id/separatorThree"
                 android:layout_width="16dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="64dp"
+                android:layout_marginLeft="54dp"
                 android:layout_toRightOf="@+id/italyTwo"
                 android:background="@android:color/darker_gray" />
 
             <View
                 android:id="@+id/madagascarOne"
-                android:layout_width="64dp"
+                android:layout_width="54dp"
                 android:layout_height="match_parent"
                 android:layout_toRightOf="@+id/separatorThree"
                 android:background="@android:color/white" />
 
             <View
                 android:id="@+id/madagascarThree"
-                android:layout_width="128dp"
-                android:layout_height="72dp"
-                android:layout_marginTop="72dp"
+                android:layout_width="106dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="60dp"
                 android:layout_toRightOf="@+id/madagascarOne"
                 android:background="@android:color/holo_green_dark" />
 
         </RelativeLayout>
 
         // colombia
-
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="144dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
@@ -150,14 +146,14 @@
 
             <View
                 android:id="@+id/colombiaOne"
-                android:layout_width="192dp"
-                android:layout_height="72dp"
+                android:layout_width="160dp"
+                android:layout_height="60dp"
                 android:background="@android:color/holo_orange_light" />
 
             <View
                 android:id="@+id/colombiaTwo"
-                android:layout_width="192dp"
-                android:layout_height="36dp"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
                 android:layout_below="@+id/colombiaOne"
                 android:background="@android:color/holo_blue_dark" />
 

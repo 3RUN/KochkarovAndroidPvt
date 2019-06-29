@@ -14,6 +14,8 @@ import by.itacademy.pvt.R
 
 class Dz5PieView : View {
 
+    
+
     private var screenCenterWidth = 0f
     private var screenCenterHeight = 0f
 

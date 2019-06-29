@@ -1,6 +1,5 @@
 package by.itacademy.pvt.dz4
 
-import android.annotation.TargetApi
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -8,6 +7,7 @@ import android.graphics.Rect
 import android.os.Build
 import android.util.AttributeSet
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import by.itacademy.pvt.R
 import java.util.Calendar
@@ -85,7 +85,7 @@ class Dz4ClockView : View {
 
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(
         context,
         attrs,

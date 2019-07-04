@@ -94,5 +94,7 @@
     <dimen name="dz6ItemBackgroundHeight">95dp</dimen>
     <dimen name="dz6LayoutPadding">8dp</dimen>
     <dimen name="dz6LayoutMargin">2dp</dimen>
+    <dimen name="dz6FilterTextHeight">32dp</dimen>
+    <dimen name="dz6RecycleViewMarginTop">40dp</dimen>
 
 </resources>

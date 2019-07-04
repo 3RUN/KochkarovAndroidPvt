@@ -5,10 +5,21 @@
     android:background="@android:color/darker_gray"
     android:orientation="vertical">
 
+    <EditText
+        android:id="@+id/filterEditId"
+        style="@style/Dz6FilterEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dz6FilterTextHeight"
+        android:hint="@string/dz6FilterText"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignTop="@+id/filterEditId"
+        android:layout_marginTop="@dimen/dz6RecycleViewMarginTop"
         android:layout_marginBottom="@dimen/dz6ListRelativeLayoutHeight" />
 
     <RelativeLayout

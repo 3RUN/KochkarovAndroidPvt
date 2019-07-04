@@ -83,11 +83,12 @@
     <dimen name="dz5PieLineWidth">4dp</dimen>
 
     <dimen name="dz6ListRelativeLayoutHeight">64dp</dimen>
-    <dimen name="dz6DetailImageSize">164dp</dimen>
+
+    <dimen name="dz6DetailImageSize">156dp</dimen>
     <dimen name="dz6DetailProgressBarSize">128dp</dimen>
-    <dimen name="dz6DetailNameMarginTop">128dp</dimen>
-    <dimen name="dz6DetailFrameMarginTop">64dp</dimen>
+    <dimen name="dz6DetailFrameMarginTop">32dp</dimen>
     <dimen name="dz6DetailLinearMarginTop">48dp</dimen>
+    <dimen name="dz6DetailTextMarginTop">16dp</dimen>
     <dimen name="dz6ItemImageSize">80dp</dimen>
     <dimen name="dz6ItemProgressBarSize">64dp</dimen>
     <dimen name="dz6ItemHeight">100dp</dimen>

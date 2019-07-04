@@ -7,7 +7,7 @@ import by.itacademy.pvt.R
 import by.itacademy.pvt.dz6.entity.Student
 
 class Dz6ListAdapter(
-    private val items: List<Student>,
+    private var items: List<Student>,
     private val listener: ClickListener
 ) : RecyclerView.Adapter<Dz6ViewHolder>() {
 

@@ -1,15 +1,18 @@
 package by.itacademy.pvt.dz6
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.View
+import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.R
-import by.itacademy.pvt.dz6.Dz6StudentProvider.addStudent
 import by.itacademy.pvt.dz6.Dz6StudentProvider.getStudentAsList
+import by.itacademy.pvt.dz6.Dz6StudentProvider.initStudents
 import by.itacademy.pvt.dz6.entity.Student
-import java.util.UUID
 
 class Dz6StudentListActivity : Activity(), Dz6ListAdapter.ClickListener {
 
@@ -17,74 +20,35 @@ class Dz6StudentListActivity : Activity(), Dz6ListAdapter.ClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dz6list)
 
+        val editTextFilter = findViewById<EditText>(R.id.filterEditId)
+        val addStudentButton = findViewById<View>(R.id.addButtonId)
+
         val recycleView = findViewById<RecyclerView>(R.id.recycleView)
         recycleView.setHasFixedSize(true)
         recycleView.layoutManager = LinearLayoutManager(this)
 
         // add students into singleton
-        initStudentsMap()
+        initStudents()
 
         val students = getStudentAsList()
         recycleView.adapter = Dz6ListAdapter(students, this)
+
+        addStudentButton
+            .setOnClickListener {
+                val intent = Intent(this, Dz6StudentEditActivity::class.java)
+                startActivity(intent)
+            }
+
+        editTextFilter.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(p0: Editable?) {}
+
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+        })
     }
 
     override fun onStudentClick(student: Student) {
-        Toast.makeText(this, student.id.toString(), Toast.LENGTH_SHORT).show()
-    }
-
-    fun initStudentsMap() {
-        addStudent(
-            Student(
-                UUID.randomUUID(),
-                "Ivan Ivanov",
-                "http://i.imgur.com/H981AN7.jpg",
-                23
-            )
-        )
-
-        addStudent(
-            Student(
-                UUID.randomUUID(),
-                "Petr Petrov",
-                "https://introweska.files.wordpress.com/2016/12/macaca_nigra_self-portrait_rotated_and_cropped.jpg",
-                32
-            )
-        )
-
-        addStudent(
-            Student(
-                UUID.randomUUID(),
-                "Andrey Baranov",
-                "https://avatarfiles.alphacoders.com/916/91685.jpg",
-                17
-            )
-        )
-
-        addStudent(
-            Student(
-                UUID.randomUUID(),
-                "Ilya Kazakov",
-                "https://lolzteam.net/data/avatars/l/272/272785.jpg",
-                53
-            )
-        )
-
-        addStudent(
-            Student(
-                UUID.randomUUID(),
-                "Masha Petrenko",
-                "https://s00.yaplakal.com/pics/pics_original/4/9/0/12708094.jpg",
-                26
-            )
-        )
-
-        addStudent(
-            Student(
-                UUID.randomUUID(),
-                "Noland Ritcher",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTEfYS-RllN8jZn9W-J7IlhG-okqH-3dMzuUlml2chgXpsWpKs",
-                19
-            )
-        )
+        startActivity(Dz6StudentDetailsActivity.getIntent(this@Dz6StudentListActivity, student.id))
     }
 }

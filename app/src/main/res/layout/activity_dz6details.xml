@@ -30,91 +30,124 @@
 
     </FrameLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignTop="@+id/imageFrameId"
-        android:layout_marginTop="@dimen/dz6DetailNameMarginTop"
+        android:layout_marginTop="@dimen/dz6DetailImageSize"
         android:layout_marginBottom="@dimen/dz6ListRelativeLayoutHeight"
-        android:orientation="horizontal">
+        android:fillViewport="true">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="2">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/nameFieldId"
-                style="@style/Dz6DetailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:text="@string/dz6FullNameEdit" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
 
-            <TextView
-                android:id="@+id/ageFieldId"
-                style="@style/Dz6DetailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/nameFieldId"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="48dp"
-                android:text="@string/dz6AgeEdit" />
+                <TextView
+                    android:id="@+id/nameFieldId"
+                    style="@style/Dz6DetailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
+                    android:text="@string/dz6FullNameEdit" />
 
-            <TextView
-                android:id="@+id/urlFieldId"
-                style="@style/Dz6DetailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/ageFieldId"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="48dp"
-                android:text="@string/dz6UrlEdit" />
+                <TextView
+                    android:id="@+id/ageFieldId"
+                    style="@style/Dz6DetailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nameFieldId"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/dz6AgeEdit" />
 
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/urlFieldId"
+                    style="@style/Dz6DetailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ageFieldId"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/dz6UrlEdit" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            </RelativeLayout>
 
-            <TextView
-                android:id="@+id/studentNameFieldId"
-                style="@style/Dz6StudentDetailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="16dp" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-            <TextView
-                android:id="@+id/sAgeFieldId"
-                style="@style/Dz6StudentDetailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/studentNameFieldId"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="16dp" />
+                <HorizontalScrollView
+                    android:id="@+id/scrollNameId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
+                    android:layout_marginEnd="16dp"
+                    android:scrollbars="none">
 
-            <TextView
-                android:id="@+id/sUrlFieldId"
-                style="@style/Dz6StudentDetailText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/sAgeFieldId"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="48dp"
-                android:layout_marginEnd="16dp" />
+                    <TextView
+                        android:id="@+id/studentNameFieldId"
+                        style="@style/Dz6StudentDetailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="here comes some text line to text" />
 
-        </RelativeLayout>
+                </HorizontalScrollView>
 
-    </LinearLayout>
+                <HorizontalScrollView
+                    android:id="@+id/scrollAgeId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/scrollNameId"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/studentAgeFieldId"
+                        style="@style/Dz6StudentDetailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="here comes some text line to text" />
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollUrlId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/scrollAgeId"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/studentUrlFieldId"
+                        style="@style/Dz6StudentDetailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="here comes some text line to text" />
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"

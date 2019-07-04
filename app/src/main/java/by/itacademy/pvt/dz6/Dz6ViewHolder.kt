@@ -7,8 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz6.entity.Student
-import by.itacademy.pvt.utils.ImageLoaderCallback
-import by.itacademy.pvt.utils.imageLoaderCircle
+import by.itacademy.pvt.dz6.utils.loadStudentIcon
 
 class Dz6ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -17,29 +16,8 @@ class Dz6ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val textView = itemView.findViewById<TextView>(R.id.textViewId)
 
     fun bind(student: Student) {
-
-        val height = textView.resources.getDimension(R.dimen.dz6ItemImageSize).toInt()
-
-        imageLoaderCircle(student.url, imageView, height, height, object : ImageLoaderCallback {
-
-            override fun onError(e: Exception) {
-                hideProgressBar()
-                setErrorImage()
-            }
-
-            override fun onSuccess() {
-                hideProgressBar()
-            }
-        })
-
+        val imageSize = itemView.resources.getDimension(R.dimen.dz6ItemImageSize).toInt()
+        loadStudentIcon(imageSize, student, imageView, progressBar)
         textView.text = student.name
-    }
-
-    private fun setErrorImage() {
-        imageView.setImageResource(R.drawable.error_icon)
-    }
-
-    private fun hideProgressBar() {
-        progressBar.visibility = View.GONE
     }
 }

@@ -62,15 +62,7 @@ object Dz6StudentProvider {
         return studentMap
     }
 
-    fun getStudentFrom(map: MutableMap<UUID, Student>): List<Student> {
-        var list = mutableListOf<Student>()
-        for (student in map) {
-            list.add(student.value)
-        }
-        return list
-    }
-
-    fun getStudentAsList(): List<Student> {
+    fun getStudentAsList(): MutableList<Student> {
         var list = mutableListOf<Student>()
         for (student in studentMap) {
             list.add(student.value)
@@ -99,5 +91,16 @@ object Dz6StudentProvider {
     fun replaceStudent(student: Student) {
         removeStudent(student)
         studentMap.put(student.id, student)
+    }
+
+    fun filter(text: String, originList: MutableList<Student>): MutableList<Student> {
+        var filteredList = mutableListOf<Student>()
+
+        for (item in originList) {
+            if (item.name.toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item)
+            }
+        }
+        return filteredList
     }
 }

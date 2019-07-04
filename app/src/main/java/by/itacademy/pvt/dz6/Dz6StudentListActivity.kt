@@ -10,6 +10,7 @@ import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.R
+import by.itacademy.pvt.dz6.Dz6StudentProvider.filter
 import by.itacademy.pvt.dz6.Dz6StudentProvider.getStudentAsList
 import by.itacademy.pvt.dz6.Dz6StudentProvider.initStudents
 import by.itacademy.pvt.dz6.entity.Student
@@ -27,11 +28,13 @@ class Dz6StudentListActivity : Activity(), Dz6ListAdapter.ClickListener {
         recycleView.setHasFixedSize(true)
         recycleView.layoutManager = LinearLayoutManager(this)
 
-        // add students into singleton
         initStudents()
+        val studentsFull = getStudentAsList()
+        var studentsFiltered = studentsFull.toMutableList()
 
-        val students = getStudentAsList()
-        recycleView.adapter = Dz6ListAdapter(students, this)
+        if (recycleView.adapter == null) {
+            recycleView.adapter = Dz6ListAdapter(studentsFiltered, this)
+        }
 
         addStudentButton
             .setOnClickListener {
@@ -40,7 +43,15 @@ class Dz6StudentListActivity : Activity(), Dz6ListAdapter.ClickListener {
             }
 
         editTextFilter.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(p0: Editable?) {}
+            override fun afterTextChanged(s: Editable?) {
+                studentsFiltered.clear()
+                if (editTextFilter.text.toString().toLowerCase().trim().isNotEmpty()) {
+                    studentsFiltered.addAll(filter(s.toString().toLowerCase(), studentsFull))
+                } else {
+                    studentsFiltered.addAll(studentsFull)
+                }
+                recycleView.adapter?.notifyDataSetChanged()
+            }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
 

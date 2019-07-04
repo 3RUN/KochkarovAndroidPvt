@@ -107,9 +107,9 @@ class Dz5PieView : View {
     private fun drawDiagram(canvas: Canvas) {
         val dataSum = pieData.sum()
         var angleStart = 0f
-        var angleSweep = 0f
+        var angleSweep: Float
         var colorIterator = 0
-        var radialAngle = 0.0
+        var radialAngle: Double
         val textOffset = 1.4f
 
         for (i in pieData) {

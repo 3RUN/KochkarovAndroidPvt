@@ -1,27 +1,29 @@
 package by.itacademy.pvt.dz6
 
 import by.itacademy.pvt.dz6.entity.Student
+import java.util.UUID
 
 object Dz6Singleton {
-    val students = mutableListOf<Student>()
+    private val studentMap = mutableMapOf<UUID, Student>()
+
+    fun getStudent(id: UUID): Student? {
+        return studentMap[id]
+    }
 
     fun addStudent(student: Student) {
-        students.add(student)
+        studentMap.put(student.id, student)
     }
 
     fun removeStudent(student: Student) {
-        students.remove(student)
+        studentMap.remove(student.id)
     }
 
-    fun getStudentIndex(student: Student): Int {
-        return students.indexOf(student)
+    fun removeAllStudents() {
+        studentMap.clear()
     }
 
-    fun getStudentByIndex(index: Int): Student {
-        return students[index]
-    }
-
-    fun clearStudents() {
-        students.clear()
+    fun replaceStudent(student: Student) {
+        removeStudent(student)
+        addStudent(student)
     }
 }

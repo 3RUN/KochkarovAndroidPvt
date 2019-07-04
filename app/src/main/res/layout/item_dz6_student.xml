@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dz6ItemHeight"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dz6ItemBackgroundHeight"
+        android:background="@android:color/holo_blue_dark"
+        android:orientation="horizontal"
+        android:padding="@dimen/dz6LayoutPadding">
+
+        <FrameLayout
+            android:id="@+id/imageFrameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dz6LayoutMargin">
+
+            <ProgressBar
+                android:id="@+id/progressBarId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minWidth="@dimen/dz6ItemProgressBarSize"
+                android:minHeight="@dimen/dz6ItemProgressBarSize"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageLoaderViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textViewId"
+            style="@style/Dz6StudentItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageFrameId" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

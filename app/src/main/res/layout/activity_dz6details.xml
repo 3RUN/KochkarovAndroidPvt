@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
 
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/imageFrameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dz6DetailFrameMarginTop">
+
+        <ProgressBar
+            android:id="@+id/progressBarId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="@dimen/dz6DetailProgressBarSize"
+            android:minHeight="@dimen/dz6DetailProgressBarSize"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageLoaderViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/imageFrameId"
+        android:layout_marginTop="@dimen/dz6DetailNameMarginTop"
+        android:layout_marginBottom="@dimen/dz6ListRelativeLayoutHeight"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/nameFieldId"
+                style="@style/Dz6DetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:text="@string/dz6FullNameEdit" />
+
+            <TextView
+                android:id="@+id/ageFieldId"
+                style="@style/Dz6DetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/nameFieldId"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/dz6AgeEdit" />
+
+            <TextView
+                android:id="@+id/urlFieldId"
+                style="@style/Dz6DetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/ageFieldId"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:text="@string/dz6UrlEdit" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/studentNameFieldId"
+                style="@style/Dz6StudentDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/sAgeFieldId"
+                style="@style/Dz6StudentDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/studentNameFieldId"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp" />
+
+            <TextView
+                android:id="@+id/sUrlFieldId"
+                style="@style/Dz6StudentDetailText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/sAgeFieldId"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dz6ListRelativeLayoutHeight"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark">
+
+        <Button
+            android:id="@+id/editButtonId"
+            style="@style/Dz6Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dz6EditButton" />
+
+        <Button
+            android:id="@+id/deleteButtonId"
+            style="@style/Dz6Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dz6DeleteButton" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -48,4 +48,11 @@
     <string name="imageURL">http://i.imgur.com/H981AN7.jpg</string>
     <string name="buttonLoad">LOAD IMAGE</string>
 
+    <string name="dz6SaveButton">SAVE</string>
+    <string name="dz6EditButton">EDIT</string>
+    <string name="dz6DeleteButton">DELETE</string>
+    <string name="dz6FullNameEdit">Full Name</string>
+    <string name="dz6AgeEdit">Age</string>
+    <string name="dz6UrlEdit">Icon URL</string>
+
 </resources>

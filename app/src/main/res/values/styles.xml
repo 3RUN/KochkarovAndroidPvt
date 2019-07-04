@@ -152,4 +152,56 @@
         <item name="android:scaleType">centerCrop</item>
     </style>
 
+    <style name="Dz6ListAddButton">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:scaleX">2</item>
+        <item name="android:scaleY">2</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:src">@drawable/ic_add_circle_black_24dp</item>
+        <item name="android:tint">@android:color/holo_green_light</item>
+    </style>
+
+    <style name="Dz6Buttons">
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="Dz6EditText">
+        <item name="android:background">#ED808080</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/monda_regular</item>
+        <item name="android:paddingStart">@dimen/editTextPaddingStart</item>
+        <item name="android:paddingTop">@dimen/editTextPaddingTop</item>
+        <item name="android:paddingBottom">@dimen/editTextPaddingBottom</item>
+        <item name="android:layout_marginStart">@dimen/editTextMarginStart</item>
+        <item name="android:layout_marginEnd">@dimen/editTextMarginEnd</item>
+        <item name="android:drawablePadding">@dimen/editTextDrawablePadding</item>
+    </style>
+
+    <style name="Dz6DetailText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/monda_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Dz6StudentDetailText">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/monda_regular</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Dz6StudentItemText">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:fontFamily">@font/monda_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
 </resources>

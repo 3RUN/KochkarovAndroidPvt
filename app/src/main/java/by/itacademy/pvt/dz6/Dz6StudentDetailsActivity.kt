@@ -86,8 +86,5 @@ class Dz6StudentDetailsActivity : Activity() {
 
         val ageText = findViewById<TextView>(R.id.studentAgeFieldId)
         ageText.text = student.age.toString()
-
-        val urlText = findViewById<TextView>(R.id.studentUrlFieldId)
-        urlText.text = student.url
     }
 }

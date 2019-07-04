@@ -46,7 +46,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2">
+                android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/nameFieldId"
@@ -68,17 +68,6 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
                     android:text="@string/dz6AgeEdit" />
-
-                <TextView
-                    android:id="@+id/urlFieldId"
-                    style="@style/Dz6DetailText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/ageFieldId"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
-                    android:text="@string/dz6UrlEdit" />
 
             </RelativeLayout>
 
@@ -117,25 +106,6 @@
 
                     <TextView
                         android:id="@+id/studentAgeFieldId"
-                        style="@style/Dz6StudentDetailText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="here comes some text line to text" />
-
-                </HorizontalScrollView>
-
-                <HorizontalScrollView
-                    android:id="@+id/scrollUrlId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/scrollAgeId"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="16dp"
-                    android:scrollbars="none">
-
-                    <TextView
-                        android:id="@+id/studentUrlFieldId"
                         style="@style/Dz6StudentDetailText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

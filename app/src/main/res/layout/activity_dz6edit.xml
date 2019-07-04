@@ -6,32 +6,32 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/nameEditTextId"
-        style="@style/Dz6EditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:hint="@string/dz6FullNameEdit"
-        android:imeOptions="actionNext"
-        android:inputType="text" />
-
-    <EditText
         android:id="@+id/urlEditTextId"
         style="@style/Dz6EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/nameEditTextId"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="64dp"
         android:hint="@string/dz6UrlEdit"
         android:imeOptions="actionNext"
         android:inputType="textUri" />
+
+    <EditText
+        android:id="@+id/nameEditTextId"
+        style="@style/Dz6EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/urlEditTextId"
+        android:layout_marginTop="80dp"
+        android:hint="@string/dz6FullNameEdit"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/ageEditTextId"
         style="@style/Dz6EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/urlEditTextId"
+        android:layout_alignTop="@+id/nameEditTextId"
         android:layout_marginTop="80dp"
         android:hint="@string/dz6AgeEdit"
         android:imeOptions="actionDone"

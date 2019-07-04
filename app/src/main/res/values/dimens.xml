@@ -7,7 +7,7 @@
 
     <dimen name="loginationEditTextSize">22sp</dimen>
 
-    <dimen name="logoMarginTop">96dp</dimen>
+    <dimen name="logoMarginTop">64dp</dimen>
 
     <dimen name="editTextMarginStart">32dp</dimen>
     <dimen name="editTextMarginEnd">32dp</dimen>
@@ -23,11 +23,11 @@
     <dimen name="buttonPaddingStart">16dp</dimen>
     <dimen name="buttonPaddingEnd">16dp</dimen>
 
-    <dimen name="loginEditTextMarginTop">64dp</dimen>
-    <dimen name="passwordEditTextMarginTop">96dp</dimen>
+    <dimen name="loginEditTextMarginTop">56dp</dimen>
+    <dimen name="passwordEditTextMarginTop">80dp</dimen>
 
     <dimen name="loginTextSize">24sp</dimen>
-    <dimen name="loginButtonMarginTop">112dp</dimen>
+    <dimen name="loginButtonMarginTop">96dp</dimen>
 
     <dimen name="forgotTextSize">18sp</dimen>
     <dimen name="forgotMarginTop">72dp</dimen>

@@ -8,13 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_blue_dark"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:orientation="vertical">
 
         <FrameLayout
             android:id="@+id/imageFrameId"
-            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_marginLeft="@dimen/dz3FrameMarginLeft"
             android:layout_marginTop="@dimen/dz3FrameMarginTop">
 
@@ -48,13 +50,14 @@
             android:text="@string/imageURL" />
 
         <Button
-            android:layout_alignTop="@+id/urlEditText"
             android:id="@+id/loadButton"
             style="@style/UrlLoadButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/urlEditText"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="64dp"
+            android:layout_marginBottom="32dp"
             android:text="@string/buttonLoad" />
 
     </RelativeLayout>

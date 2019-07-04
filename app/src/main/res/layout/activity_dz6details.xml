@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dz6DetailFrameMarginTop">
+        android:layout_marginTop="@dimen/dz6DetailFrameLayoutMarginTop">
 
         <ProgressBar
             android:id="@+id/progressBarId"
@@ -35,12 +35,12 @@
         android:layout_height="match_parent"
         android:layout_alignTop="@+id/imageFrameId"
         android:layout_marginTop="@dimen/dz6DetailImageSize"
-        android:layout_marginBottom="@dimen/dz6ListRelativeLayoutHeight"
+        android:layout_marginBottom="@dimen/dz6DetailScrollViewHeight"
         android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <RelativeLayout
@@ -54,8 +54,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginStart"
+                    android:layout_marginTop="@dimen/dz6DetailNameTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginEnd"
                     android:text="@string/dz6FullNameEdit" />
 
                 <TextView
@@ -65,8 +66,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/nameFieldId"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginStart"
+                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginEnd"
                     android:text="@string/dz6AgeEdit" />
 
             </RelativeLayout>
@@ -80,17 +82,16 @@
                     android:id="@+id/scrollNameId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginEnd"
+                    android:layout_marginTop="@dimen/dz6DetailNameTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginStart"
                     android:scrollbars="none">
 
                     <TextView
                         android:id="@+id/studentNameFieldId"
                         style="@style/Dz6StudentDetailText"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="here comes some text line to text" />
+                        android:layout_height="wrap_content" />
 
                 </HorizontalScrollView>
 
@@ -99,17 +100,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/scrollNameId"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginEnd"
+                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginStart"
                     android:scrollbars="none">
 
                     <TextView
                         android:id="@+id/studentAgeFieldId"
                         style="@style/Dz6StudentDetailText"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="here comes some text line to text" />
+                        android:layout_height="wrap_content" />
 
                 </HorizontalScrollView>
 
@@ -121,7 +121,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dz6ListRelativeLayoutHeight"
+        android:layout_height="@dimen/dz6ButtomButtonLayoutHeight"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark">
 

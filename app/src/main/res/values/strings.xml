@@ -55,5 +55,9 @@
     <string name="dz6FullNameEdit">Full Name</string>
     <string name="dz6AgeEdit">Age</string>
     <string name="dz6UrlEdit">Icon URL</string>
+    <string name="dz6NotFound">Student with the given id not found!</string>
+    <string name="dz6WrongName">Wrong input in name field!</string>
+    <string name="dz6WrongAge">Wrong input in age field!</string>
+    <string name="dz6WrongUrl">Wrong input in URL field!</string>
 
 </resources>

@@ -11,7 +11,7 @@
         android:id="@+id/filterEditId"
         style="@style/Dz6FilterEditText"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dz6FilterTextHeight"
+        android:layout_height="@dimen/dz6ListEditTextHeight"
         android:hint="@string/dz6FilterText"
         android:imeOptions="actionDone"
         android:inputType="text" />
@@ -21,12 +21,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignTop="@+id/filterEditId"
-        android:layout_marginTop="@dimen/dz6RecycleViewMarginTop"
-        android:layout_marginBottom="@dimen/dz6ListRelativeLayoutHeight" />
+        android:layout_marginTop="@dimen/dz6ListRecycleViewMarginTop"
+        android:layout_marginBottom="@dimen/dz6ButtomButtonLayoutHeight" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dz6ListRelativeLayoutHeight"
+        android:layout_height="@dimen/dz6ButtomButtonLayoutHeight"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark">
 

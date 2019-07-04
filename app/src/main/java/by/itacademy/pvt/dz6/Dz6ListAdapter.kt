@@ -20,7 +20,6 @@ class Dz6ListAdapter(
         holder.itemView.setOnClickListener {
             listener.onStudentClick(items[holder.adapterPosition])
         }
-
         return holder
     }
 

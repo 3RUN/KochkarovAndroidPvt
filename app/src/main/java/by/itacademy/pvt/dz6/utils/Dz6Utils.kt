@@ -11,7 +11,6 @@ import by.itacademy.pvt.utils.imageLoaderCircle
 fun loadStudentIcon(imageSize: Int, student: Student, imageView: ImageView, progressBar: ProgressBar) {
 
     imageLoaderCircle(student.url, imageView, imageSize, imageSize, object : ImageLoaderCallback {
-
         override fun onError(e: Exception) {
             hideStudentProgressBar(progressBar)
             setStudentErrorImage(imageView)

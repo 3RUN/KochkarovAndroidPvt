@@ -10,7 +10,7 @@
         style="@style/Dz6EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="@dimen/dz6EditTextFieldMarginTop"
         android:hint="@string/dz6UrlEdit"
         android:imeOptions="actionNext"
         android:inputType="textUri" />
@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/urlEditTextId"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/dz6EditTextFieldMarginTop"
         android:hint="@string/dz6FullNameEdit"
         android:imeOptions="actionNext"
         android:inputType="text" />
@@ -32,14 +32,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/nameEditTextId"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/dz6EditTextFieldMarginTop"
         android:hint="@string/dz6AgeEdit"
         android:imeOptions="actionDone"
         android:inputType="number" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dz6ListRelativeLayoutHeight"
+        android:layout_height="@dimen/dz6ButtomButtonLayoutHeight"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimaryDark">
 

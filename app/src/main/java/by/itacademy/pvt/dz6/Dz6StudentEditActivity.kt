@@ -48,7 +48,11 @@ class Dz6StudentEditActivity : Activity() {
             val student: Student = getStudent(UUID.fromString(idStr))
 
             if (student == null) {
-                Toast.makeText(this, "Student not found. Wrong id!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    getString(R.string.dz6NotFound),
+                    Toast.LENGTH_SHORT
+                ).show()
                 exitToMainList()
             }
 
@@ -56,8 +60,6 @@ class Dz6StudentEditActivity : Activity() {
 
             saveButton
                 .setOnClickListener {
-                    // valid input ?
-                    // then save all edit
                     if (checkInput(nameText, ageText, urlText)) {
                         editStudentAndExit(
                             student,
@@ -67,11 +69,11 @@ class Dz6StudentEditActivity : Activity() {
                         )
                     } else {
                         if (!checkName(nameText)) {
-                            castError("Wrong input in name field!")
+                            castError(getString(R.string.dz6WrongName))
                         } else if (!checkAge(ageText)) {
-                            castError("Wrong input in age field!")
+                            castError(getString(R.string.dz6WrongAge))
                         } else if (!checkUrl(urlText)) {
-                            castError("Wrong input in URL field!")
+                            castError(getString(R.string.dz6WrongUrl))
                         }
                     }
                 }
@@ -79,8 +81,6 @@ class Dz6StudentEditActivity : Activity() {
             // creating new one!
             saveButton
                 .setOnClickListener {
-                    // valid input ?
-                    // then save this student
                     if (checkInput(nameText, ageText, urlText)) {
                         createStudentAndExit(
                             nameText.text.toString(),
@@ -89,11 +89,11 @@ class Dz6StudentEditActivity : Activity() {
                         )
                     } else {
                         if (!checkName(nameText)) {
-                            castError("Wrong input in name field!")
+                            castError(getString(R.string.dz6WrongName))
                         } else if (!checkAge(ageText)) {
-                            castError("Wrong input in age field!")
+                            castError(getString(R.string.dz6WrongAge))
                         } else if (!checkUrl(urlText)) {
-                            castError("Wrong input in URL field!")
+                            castError(getString(R.string.dz6WrongUrl))
                         }
                     }
                 }

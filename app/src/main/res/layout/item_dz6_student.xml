@@ -9,14 +9,14 @@
         android:layout_height="@dimen/dz6ItemBackgroundHeight"
         android:background="@android:color/holo_blue_dark"
         android:orientation="horizontal"
-        android:padding="@dimen/dz6LayoutPadding">
+        android:padding="@dimen/dz6ItemRelativeLayoutPadding">
 
         <FrameLayout
             android:id="@+id/imageFrameId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/dz6LayoutMargin">
+            android:layout_marginLeft="@dimen/dz6FrameLayoutMarginLeft">
 
             <ProgressBar
                 android:id="@+id/progressBarId"

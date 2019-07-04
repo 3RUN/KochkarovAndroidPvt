@@ -50,16 +50,8 @@ object Dz6StudentProvider {
         )
     }
 
-    fun setStudentAll(map: MutableMap<UUID, Student>) {
-        studentMap = map
-    }
-
     fun getStudent(id: UUID): Student {
         return studentMap.get(id)!!
-    }
-
-    fun getStudentAll(): MutableMap<UUID, Student> {
-        return studentMap
     }
 
     fun getStudentAsList(): MutableList<Student> {
@@ -82,10 +74,6 @@ object Dz6StudentProvider {
 
     fun removeStudent(student: Student) {
         studentMap.remove(student.id)
-    }
-
-    fun removeStudentAll() {
-        studentMap.clear()
     }
 
     fun replaceStudent(student: Student) {

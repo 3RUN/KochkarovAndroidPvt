@@ -32,47 +32,43 @@
     <dimen name="forgotTextSize">18sp</dimen>
     <dimen name="forgotMarginTop">72dp</dimen>
 
+    <dimen name="progressBarWidth">50dp</dimen>
+    <dimen name="progressBarHeight">50dp</dimen>
+
     <dimen name="dz2UrlScale">14sp</dimen>
     <dimen name="dz2UrlMarginTop">264dp</dimen>
     <dimen name="dz2ImageHeightWeight">256dp</dimen>
-
-    <dimen name="progressBarWidth">50dp</dimen>
-    <dimen name="progressBarHeight">50dp</dimen>
 
     <dimen name="dz3NotificationWidth">32dp</dimen>
     <dimen name="dz3NotificationHeight">32dp</dimen>
     <dimen name="dz3NotificationMarginLeft">16dp</dimen>
     <dimen name="dz3NotificationMarginTop">24dp</dimen>
-
     <dimen name="dz3TextNameMarginLeft">16dp</dimen>
     <dimen name="dz3TextNameMarginTop">146dp</dimen>
     <dimen name="dz3TextNameScale">24sp</dimen>
-
     <dimen name="dz3TextMarginStart">16dp</dimen>
     <dimen name="dz3TextMarginTop">40dp</dimen>
     <dimen name="dz3TextTextSize">18sp</dimen>
-
     <dimen name="dz3TextUseInfoMarginStart">2dp</dimen>
     <dimen name="dz3TextUseInfoMarginTop">40dp</dimen>
     <dimen name="dz3TextUseInfoTextSize">18sp</dimen>
-
     <dimen name="dz3ImageHeightWeight">128dp</dimen>
     <dimen name="dz3LineMargin">8dp</dimen>
     <dimen name="dz3LineHeight">1dp</dimen>
     <dimen name="dz3FrameMarginLeft">24dp</dimen>
     <dimen name="dz3FrameMarginTop">100dp</dimen>
     <dimen name="dz3RelativeMarginBottom">24dp</dimen>
+    <dimen name="dz3TabMarginTop">16dp</dimen>
+    <dimen name="dz3TabTextScale">16sp</dimen>
+    <dimen name="dz3ButtonDigitTextScale">24sp</dimen>
 
     <dimen name="dz4ClockCircleWidth">6dp</dimen>
     <dimen name="dz4ClockCirclePadding">24dp</dimen>
     <dimen name="dz4ClockCenterDotRadius">12dp</dimen>
-
     <dimen name="dz4ClockLineMainLength">24dp</dimen>
     <dimen name="dz4ClockLineMainWidth">12dp</dimen>
-
     <dimen name="dz4ClockLinesLength">16dp</dimen>
     <dimen name="dz4ClockLinesWidth">6dp</dimen>
-
     <dimen name="dz4ClockNumberTextSize">32sp</dimen>
     <dimen name="dz4ClockNumberTextPaddings">32dp</dimen>
     <dimen name="dz4ClockHandHourWidth">12dp</dimen>
@@ -82,20 +78,32 @@
     <dimen name="dz5PieTextSize">24sp</dimen>
     <dimen name="dz5PieLineWidth">4dp</dimen>
 
-    <dimen name="dz6ListRelativeLayoutHeight">64dp</dimen>
-
+    <dimen name="dz6ButtomButtonLayoutHeight">64dp</dimen>
     <dimen name="dz6DetailImageSize">156dp</dimen>
     <dimen name="dz6DetailProgressBarSize">128dp</dimen>
-    <dimen name="dz6DetailFrameMarginTop">32dp</dimen>
-    <dimen name="dz6DetailLinearMarginTop">48dp</dimen>
-    <dimen name="dz6DetailTextMarginTop">16dp</dimen>
+    <dimen name="dz6DetailFrameLayoutMarginTop">32dp</dimen>
+    <dimen name="dz6DetailScrollViewHeight">64dp</dimen>
+    <dimen name="dz6DetailNameTextMarginTop">16dp</dimen>
+    <dimen name="dz6DetailTextMarginEnd">4dp</dimen>
+    <dimen name="dz6DetailTextMarginStart">16dp</dimen>
+    <dimen name="dz6DetailTextMarginTop">32dp</dimen>
+    <dimen name="dz6EditTextFieldMarginTop">64dp</dimen>
+    <dimen name="dz6ListEditTextHeight">32dp</dimen>
+    <dimen name="dz6ListRecycleViewMarginTop">40dp</dimen>
+    <dimen name="dz6ListRecycleViewMarginBottom">40dp</dimen>
+    <dimen name="dz6ItemRelativeLayoutPadding">8dp</dimen>
+    <dimen name="dz6FrameLayoutMarginLeft">2dp</dimen>
     <dimen name="dz6ItemImageSize">80dp</dimen>
     <dimen name="dz6ItemProgressBarSize">64dp</dimen>
     <dimen name="dz6ItemHeight">100dp</dimen>
     <dimen name="dz6ItemBackgroundHeight">95dp</dimen>
-    <dimen name="dz6LayoutPadding">8dp</dimen>
-    <dimen name="dz6LayoutMargin">2dp</dimen>
-    <dimen name="dz6FilterTextHeight">32dp</dimen>
-    <dimen name="dz6RecycleViewMarginTop">40dp</dimen>
-
+    <dimen name="dz6ListAddButtonHeight">40dp</dimen>
+    <dimen name="dz6ListAddButtonWidth">40dp</dimen>
+    <dimen name="dz6ListAddButtonMarginRight">16dp</dimen>
+    <dimen name="dz6ButtonsMargin">2dp</dimen>
+    <dimen name="dz6EditTextScale">16sp</dimen>
+    <dimen name="dz6FilterEditTextMargin">8dp</dimen>
+    <dimen name="dz6InfoTextScale">20sp</dimen>
+    <dimen name="dz6StudentItemTextMarginLeft">16dp</dimen>
+    <dimen name="dz6StudentItemTextScale">24sp</dimen>
 </resources>

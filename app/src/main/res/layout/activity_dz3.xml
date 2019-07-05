@@ -63,19 +63,19 @@
                 style="@style/Dz3Tabs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Dz3TabTrophies" />
+                android:text="@string/dz3TabTrophies" />
 
             <TextView
                 style="@style/Dz3Tabs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Dz3TabFollowing" />
+                android:text="@string/dz3TabFollowing" />
 
             <TextView
                 style="@style/Dz3Tabs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Dz3TabFollowers" />
+                android:text="@string/dz3TabFollowers" />
 
         </LinearLayout>
 
@@ -89,19 +89,19 @@
                 style="@style/Dz3ButtonDigit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Dz3Trophies" />
+                android:text="@string/dz3Trophies" />
 
             <Button
                 style="@style/Dz3ButtonDigit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Dz3Following" />
+                android:text="@string/dz3Following" />
 
             <Button
                 style="@style/Dz3ButtonDigit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Dz3Followers" />
+                android:text="@string/dz3Followers" />
 
         </LinearLayout>
 

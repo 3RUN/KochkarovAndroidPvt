@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+    <color name="urlEditTextBackground">#40808080</color>
+
     <color name="dz3Yellow">#d45807</color>
     <color name="dz3White">#ffffff</color>
     <color name="dz3Black">#000000</color>
@@ -19,5 +21,7 @@
     <color name="dz5Pie8">#1c7cd5</color>
     <color name="dz5Pie9">#56b9f7</color>
     <color name="dz5Pie10">#0ae8eb</color>
+
+    <color name="dz6EditTextBackground">#ED808080</color>
 
 </resources>

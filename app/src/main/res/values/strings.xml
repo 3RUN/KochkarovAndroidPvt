@@ -9,6 +9,7 @@
     <string name="dz4ButtonStr">DZ4</string>
     <string name="dz5PieButtonStr">DZ5Pie</string>
     <string name="dz5OwlButtonStr">DZ5Owl</string>
+    <string name="dz6ButtonStr">DZ6</string>
 
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>
@@ -36,15 +37,27 @@
     <string name="dz3UserHeightInfo">6\'1\"</string>
     <string name="dz3UserPhoneInfo">(781) 547-3320</string>
 
-    <string name="Dz3TabTrophies">Trophies</string>
-    <string name="Dz3TabFollowing">Following</string>
-    <string name="Dz3TabFollowers">Followers</string>
+    <string name="dz3TabTrophies">Trophies</string>
+    <string name="dz3TabFollowing">Following</string>
+    <string name="dz3TabFollowers">Followers</string>
 
-    <string name="Dz3Trophies">4</string>
-    <string name="Dz3Following">54</string>
-    <string name="Dz3Followers">12</string>
+    <string name="dz3Trophies">4</string>
+    <string name="dz3Following">54</string>
+    <string name="dz3Followers">12</string>
 
     <string name="imageURL">http://i.imgur.com/H981AN7.jpg</string>
     <string name="buttonLoad">LOAD IMAGE</string>
+
+    <string name="dz6FilterText">Enter student\s name here</string>
+    <string name="dz6SaveButton">SAVE</string>
+    <string name="dz6EditButton">EDIT</string>
+    <string name="dz6DeleteButton">DELETE</string>
+    <string name="dz6FullNameEdit">Full Name</string>
+    <string name="dz6AgeEdit">Age</string>
+    <string name="dz6UrlEdit">Icon URL</string>
+    <string name="dz6NotFound">Student with the given id not found!</string>
+    <string name="dz6WrongName">Wrong input in name field!</string>
+    <string name="dz6WrongAge">Wrong input in age field!</string>
+    <string name="dz6WrongUrl">Wrong input in URL field!</string>
 
 </resources>

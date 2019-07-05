@@ -27,3 +27,11 @@ fun imageLoaderCircle(url: String, imageView: ImageView, callback: ImageLoaderCa
         .transform(CircleTransform())
         .into(imageView, callback)
 }
+
+fun imageLoaderCircle(url: String, imageView: ImageView, height: Int, width: Int, callback: ImageLoaderCallback) {
+    Picasso.get()
+        .load(url)
+        .resize(height, width)
+        .transform(CircleTransform())
+        .into(imageView, callback)
+}

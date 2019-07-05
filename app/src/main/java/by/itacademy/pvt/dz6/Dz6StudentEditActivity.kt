@@ -19,6 +19,8 @@ import java.util.UUID
 
 class Dz6StudentEditActivity : Activity() {
 
+    private lateinit var student: Student
+
     companion object {
         const val ID_EXTRA = "ID_TEXT_EXTRA"
 
@@ -45,7 +47,7 @@ class Dz6StudentEditActivity : Activity() {
         if (intent.hasExtra(ID_EXTRA)) {
 
             val idStr = intent.getStringExtra(ID_EXTRA)
-            val student: Student = getStudent(UUID.fromString(idStr))
+            student = getStudent(UUID.fromString(idStr))
 
             if (student == null) {
                 Toast.makeText(
@@ -55,48 +57,44 @@ class Dz6StudentEditActivity : Activity() {
                 ).show()
                 exitToMainList()
             }
-
             loadStudentDetails(student, nameText, ageText, urlText)
+        }
 
-            saveButton
-                .setOnClickListener {
-                    if (checkInput(nameText, ageText, urlText)) {
-                        editStudentAndExit(
-                            student,
-                            nameText.text.toString(),
-                            urlText.text.toString(),
-                            (ageText.text.toString()).toInt()
-                        )
-                    } else {
-                        if (!checkName(nameText)) {
-                            castError(getString(R.string.dz6WrongName))
-                        } else if (!checkAge(ageText)) {
-                            castError(getString(R.string.dz6WrongAge))
-                        } else if (!checkUrl(urlText)) {
-                            castError(getString(R.string.dz6WrongUrl))
-                        }
-                    }
-                }
+        saveButton
+            .setOnClickListener {
+                saveButtonClick(student, nameText, ageText, urlText)
+            }
+    }
+
+    private fun saveButtonClick(
+        student: Student,
+        nameText: EditText,
+        ageText: EditText,
+        urlText: EditText
+    ) {
+        if (checkInput(nameText, ageText, urlText)) {
+            if (intent.hasExtra(ID_EXTRA)) {
+                editStudentAndExit(
+                    student,
+                    nameText.text.toString(),
+                    urlText.text.toString(),
+                    (ageText.text.toString()).toInt()
+                )
+            } else {
+                createStudentAndExit(
+                    nameText.text.toString(),
+                    urlText.text.toString(),
+                    (ageText.text.toString()).toInt()
+                )
+            }
         } else {
-            // creating new one!
-            saveButton
-                .setOnClickListener {
-                    if (checkInput(nameText, ageText, urlText)) {
-                        createStudentAndExit(
-                            nameText.text.toString(),
-                            urlText.text.toString(),
-                            (ageText.text.toString()).toInt()
-                        )
-                    } else {
-                        if (!checkName(nameText)) {
-                            castError(getString(R.string.dz6WrongName))
-                        } else if (!checkAge(ageText)) {
-                            castError(getString(R.string.dz6WrongAge))
-                        } else if (!checkUrl(urlText)) {
-                            castError(getString(R.string.dz6WrongUrl))
-                        }
-                    }
-                }
+            if (!checkName(nameText)) {
+                castError(getString(R.string.dz6WrongName))
+            } else if (!checkAge(ageText)) {
+                castError(getString(R.string.dz6WrongAge))
+            } else if (!checkUrl(urlText)) {
+                castError(getString(R.string.dz6WrongUrl))
+            }
         }
     }
 

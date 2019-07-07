@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/filterEditId"
+        style="@style/Dz6FilterEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dz6ListEditTextHeight"
+        android:hint="@string/dz6FilterText"
+        android:imeOptions="actionDone"
+        android:inputType="text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/filterEditId"
+        android:layout_marginTop="@dimen/dz6ListRecycleViewMarginTop"
+        android:layout_marginBottom="@dimen/dz6ButtomButtonLayoutHeight" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dz6ButtomButtonLayoutHeight"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageButton
+            android:id="@+id/addButtonId"
+            style="@style/Dz6ListAddButton"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

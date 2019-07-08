@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/imageFrameId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dz6DetailFrameLayoutMarginTop">
+
+        <ProgressBar
+            android:id="@+id/progressBarId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:minWidth="@dimen/dz6DetailProgressBarSize"
+            android:minHeight="@dimen/dz6DetailProgressBarSize"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imageLoaderViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/imageFrameId"
+        android:layout_marginTop="@dimen/dz6DetailImageSize"
+        android:layout_marginBottom="@dimen/dz6DetailScrollViewHeight"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/nameFieldId"
+                    style="@style/Dz6DetailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginStart"
+                    android:layout_marginTop="@dimen/dz6DetailNameTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginEnd"
+                    android:text="@string/dz6FullNameEdit" />
+
+                <TextView
+                    android:id="@+id/ageFieldId"
+                    style="@style/Dz6DetailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nameFieldId"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginStart"
+                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginEnd"
+                    android:text="@string/dz6AgeEdit" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollNameId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginEnd"
+                    android:layout_marginTop="@dimen/dz6DetailNameTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginStart"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/studentNameFieldId"
+                        style="@style/Dz6StudentDetailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollAgeId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/scrollNameId"
+                    android:layout_marginStart="@dimen/dz6DetailTextMarginEnd"
+                    android:layout_marginTop="@dimen/dz6DetailTextMarginTop"
+                    android:layout_marginEnd="@dimen/dz6DetailTextMarginStart"
+                    android:scrollbars="none">
+
+                    <TextView
+                        android:id="@+id/studentAgeFieldId"
+                        style="@style/Dz6StudentDetailText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dz6ButtomButtonLayoutHeight"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark">
+
+        <Button
+            android:id="@+id/editButtonId"
+            style="@style/Dz6Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dz6EditButton" />
+
+        <Button
+            android:id="@+id/deleteButtonId"
+            style="@style/Dz6Buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dz6DeleteButton" />
+
+    </LinearLayout>
+
+</RelativeLayout>

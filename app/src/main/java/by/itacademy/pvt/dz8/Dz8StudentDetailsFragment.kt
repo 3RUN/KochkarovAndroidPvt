@@ -69,7 +69,7 @@ class Dz8StudentDetailsFragment : Fragment() {
             }
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is Listener) {
             clickListener = context

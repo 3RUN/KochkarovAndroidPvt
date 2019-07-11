@@ -78,7 +78,7 @@ class Dz8StudentListFragment : Fragment(), Dz6ListAdapter.ClickListener {
         clickListener?.onStudentClick(student.id.toString())
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         if (context is Listener) {
             clickListener = context

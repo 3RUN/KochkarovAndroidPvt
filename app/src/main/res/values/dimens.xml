@@ -106,4 +106,12 @@
     <dimen name="dz6InfoTextScale">20sp</dimen>
     <dimen name="dz6StudentItemTextMarginLeft">16dp</dimen>
     <dimen name="dz6StudentItemTextScale">24sp</dimen>
+
+    <dimen name="dz9PeekHeight">64sp</dimen>
+    <dimen name="dz9TaxiIconSize">64dp</dimen>
+    <dimen name="dz9RelativeMarginBottom">4dp</dimen>
+    <dimen name="dz9RelativeMargin">16dp</dimen>
+    <dimen name="dz9IconTextMarginTop">50dp</dimen>
+    <dimen name="dz9FragmentTextMarginTop">16dp</dimen>
+    <dimen name="dz9FragmentTextMarginLeft">16dp</dimen>
 </resources>

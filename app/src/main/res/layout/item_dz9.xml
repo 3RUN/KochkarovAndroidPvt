@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/dz9RelativeMarginBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/iconId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dz9RelativeMargin">
+
+            <ImageView
+                android:id="@+id/imageViewId"
+                android:layout_width="@dimen/dz9TaxiIconSize"
+                android:layout_height="@dimen/dz9TaxiIconSize"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/taxi_icon" />
+
+            <TextView
+                android:id="@+id/iconTextViewId"
+                style="@style/dz9FragmentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageViewId"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dz9IconTextMarginTop" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/infoId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/dz9RelativeMargin"
+            android:layout_toRightOf="@+id/iconId">
+
+            <TextView
+                android:id="@+id/longitudeId"
+                style="@style/dz9FragmentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dz9Longitude" />
+
+            <TextView
+                android:id="@+id/longitudeInfoId"
+                style="@style/dz9FragmentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dz9FragmentTextMarginLeft"
+                android:layout_toRightOf="@+id/longitudeId" />
+
+            <TextView
+                android:id="@+id/latitudeId"
+                style="@style/dz9FragmentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/longitudeId"
+                android:layout_marginTop="@dimen/dz9FragmentTextMarginTop"
+                android:text="@string/dz9Latitude" />
+
+            <TextView
+                android:id="@+id/latitudeInfoId"
+                style="@style/dz9FragmentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/longitudeId"
+                android:layout_marginLeft="@dimen/dz9FragmentTextMarginLeft"
+                android:layout_marginTop="@dimen/dz9FragmentTextMarginTop"
+                android:layout_toRightOf="@+id/longitudeId" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

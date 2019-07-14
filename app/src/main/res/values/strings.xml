@@ -11,6 +11,7 @@
     <string name="dz5OwlButtonStr">DZ5Owl</string>
     <string name="dz6ButtonStr">DZ6</string>
     <string name="dz8ButtonStr">DZ8</string>
+    <string name="dz9ButtonStr">DZ9</string>
 
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>
@@ -61,4 +62,9 @@
     <string name="dz6WrongAge">Wrong input in age field!</string>
     <string name="dz6WrongUrl">Wrong input in URL field!</string>
 
+    <string name="dz9ButtonSheetName">Open</string>
+    <string name="dz9ButtonSheetClose">Close</string>
+    <string name="dz9Longitude">Longitude:</string>
+    <string name="dz9Latitude">Latitude:</string>
+    <string name="dz9ErrorMessage">Wasn\'t able to load vehicles!</string>
 </resources>

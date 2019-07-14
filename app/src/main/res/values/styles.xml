@@ -216,4 +216,16 @@
         <item name="android:textSize">@dimen/dz6StudentItemTextScale</item>
     </style>
 
+    <style name="dz9CarListTitle">
+        <item name="android:text">@string/dz9ButtonSheetName</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/monda_bold</item>
+    </style>
+
+    <style name="dz9FragmentText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/monda_bold</item>
+    </style>
 </resources>

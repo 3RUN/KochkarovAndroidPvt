@@ -78,8 +78,15 @@
             style="@style/DzMenuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:text="@string/dz8ButtonStr" />
+
+        <Button
+            android:id="@+id/dz9ButtonId"
+            style="@style/DzMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/dz9ButtonStr" />
 
     </LinearLayout>
 

@@ -32,6 +32,7 @@
         <activity android:name=".dz6.Dz6StudentDetailsActivity" />
         <activity android:name=".dz8.Dz8MainActivity" />
         <activity android:name=".dz9.Dz9Activity" />
+        <activity android:name=".dz11MVP.Dz11MVPActivity" />
 
         <activity android:name=".menu.MenuActivity">
             <intent-filter>

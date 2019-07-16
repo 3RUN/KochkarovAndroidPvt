@@ -1,4 +1,4 @@
-package by.itacademy.pvt.dz8
+package by.itacademy.pvt.dz11MVP
 
 import android.content.Context
 import android.os.Bundle
@@ -13,43 +13,48 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz6.Dz6ListAdapter
-import by.itacademy.pvt.dz6.Dz6StudentProvider
+import by.itacademy.pvt.dz6.Dz6StudentProvider.filter
+import by.itacademy.pvt.dz6.Dz6StudentProvider.getStudentAsList
 import by.itacademy.pvt.dz6.entity.Student
+import by.itacademy.pvt.dz8.Dz8PrefManager
 
-class Dz8StudentListFragment : Fragment(), Dz6ListAdapter.ClickListener {
+class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContract.View {
 
     companion object {
-        val TAG = Dz8StudentListFragment::class.java.canonicalName!!
+        val TAG = Dz11ListFragment::class.java.canonicalName!!
     }
 
     private var clickListener: Listener? = null
     private lateinit var prefsManager: Dz8PrefManager
+    private val listAdapter = Dz6ListAdapter(emptyList(), this)
+    private lateinit var addStudentButton: View
     private lateinit var editTextFilter: EditText
+    private lateinit var recycleView: RecyclerView
+    private lateinit var presenter: Dz11ListPresenter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_dz8list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        prefsManager = Dz8PrefManager(view.context)
+        presenter = Dz11ListPresenter(this)
+        presenter.loadStudentsList()
 
-        val addStudentButton = view.findViewById<View>(R.id.addButtonId)
-
-        val recycleView = view.findViewById<RecyclerView>(R.id.recycleView)
+        addStudentButton = view.findViewById<View>(R.id.addButtonId)
+        editTextFilter = view.findViewById<EditText>(R.id.filterEditId)
+        recycleView = view.findViewById<RecyclerView>(R.id.recycleView)
         recycleView.setHasFixedSize(true)
         recycleView.layoutManager = LinearLayoutManager(context)
 
-        val studentsFull = Dz6StudentProvider.getStudentAsList()
-        var studentsFiltered = studentsFull.toMutableList()
-
         if (recycleView.adapter == null) {
-            recycleView.adapter = Dz6ListAdapter(studentsFiltered, this)
+            recycleView.adapter = listAdapter
         }
 
-        editTextFilter = view.findViewById<EditText>(R.id.filterEditId)
-        editTextFilter.setText(prefsManager.getUserText())
-        if (editTextFilter.text.isNotEmpty()) {
-            searchFieldUpdate(recycleView, editTextFilter.text.toString(), studentsFull, studentsFiltered)
+        prefsManager = Dz8PrefManager(view.context)
+        val prefsString = prefsManager.getUserText()
+        if (prefsString.isNotEmpty()) {
+            editTextFilter.setText(prefsString)
+            presenter.searchByName(prefsString)
         }
 
         addStudentButton
@@ -59,7 +64,7 @@ class Dz8StudentListFragment : Fragment(), Dz6ListAdapter.ClickListener {
 
         editTextFilter.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                searchFieldUpdate(recycleView, s.toString(), studentsFull, studentsFiltered)
+                searchFieldUpdate(s.toString())
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
@@ -71,10 +76,6 @@ class Dz8StudentListFragment : Fragment(), Dz6ListAdapter.ClickListener {
     override fun onStop() {
         super.onStop()
         prefsManager.saveUserText(editTextFilter.text.toString())
-    }
-
-    override fun onStudentClick(student: Student) {
-        clickListener?.onStudentClick(student.id.toString())
     }
 
     override fun onAttach(context: Context) {
@@ -89,19 +90,31 @@ class Dz8StudentListFragment : Fragment(), Dz6ListAdapter.ClickListener {
         clickListener = null
     }
 
-    fun searchFieldUpdate(
-        recycleView: RecyclerView,
-        s: String,
-        studentsFull: MutableList<Student>,
-        studentsFiltered: MutableList<Student>
-    ) {
-        studentsFiltered.clear()
-        if (editTextFilter.text.toString().toLowerCase().trim().isNotEmpty()) {
-            studentsFiltered.addAll(Dz6StudentProvider.filter(s.toLowerCase(), studentsFull))
+    override fun onDestroyView() {
+        presenter.onViewDestroyed()
+        super.onDestroyView()
+    }
+
+    override fun onStudentClick(student: Student) {
+        clickListener?.onStudentClick(student.id.toString())
+    }
+
+    override fun showSearchResults(list: List<Student>) {
+        listAdapter.updateList(list)
+    }
+
+    override fun showStudentsList(list: List<Student>) {
+        listAdapter.updateList(list)
+    }
+
+    fun searchFieldUpdate(name: String) {
+        var studentsFiltered: MutableList<Student> = mutableListOf()
+        if (name.toLowerCase().trim().isNotEmpty()) {
+            studentsFiltered.addAll(filter(name, getStudentAsList()))
         } else {
-            studentsFiltered.addAll(studentsFull)
+            studentsFiltered.addAll(getStudentAsList())
         }
-        recycleView.adapter?.notifyDataSetChanged()
+        listAdapter.updateList(studentsFiltered)
     }
 
     interface Listener {

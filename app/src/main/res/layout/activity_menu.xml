@@ -85,8 +85,22 @@
             style="@style/DzMenuButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:text="@string/dz9ButtonStr" />
+
+        <Button
+            android:id="@+id/dz11MVPButtonId"
+            style="@style/DzMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dz11MVPButtonStr" />
+
+        <Button
+            android:id="@+id/dz11MVVMButtonId"
+            style="@style/DzMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/dz11MVVMButtonStr" />
 
     </LinearLayout>
 

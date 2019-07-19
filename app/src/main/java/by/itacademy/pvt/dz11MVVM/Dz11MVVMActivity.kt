@@ -1,13 +1,14 @@
-package by.itacademy.pvt.dz9
+package by.itacademy.pvt.dz11MVVM
 
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz9.entity.CoordParams
 import by.itacademy.pvt.dz9.entity.Coordinate
@@ -23,14 +24,17 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import kotlinx.android.synthetic.main.fragment_dz9.view.*
 
-class Dz9Activity : FragmentActivity(), OnMapReadyCallback, Dz9Fragment.Listener {
+private const val ZOOM = 16f
+private const val PADDING = 200
+
+class Dz11MVVMActivity : FragmentActivity(), OnMapReadyCallback {
 
     private lateinit var googleMap: GoogleMap
     private var isMapLoaded: Boolean = false
 
     private lateinit var iconTaxiBitmap: Bitmap
     private lateinit var bottomSheetBehavior: BottomSheetBehavior<CoordinatorLayout>
-    private var listOfVehicles: List<Poi> = emptyList()
+    private lateinit var viewModel: Dz11ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,9 +43,11 @@ class Dz9Activity : FragmentActivity(), OnMapReadyCallback, Dz9Fragment.Listener
         val mapFragment = supportFragmentManager.findFragmentById(R.id.googleMapId) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
+        viewModel = ViewModelProviders.of(this).get(Dz11ViewModel::class.java)
+
         if (savedInstanceState == null) {
             val transaction = supportFragmentManager.beginTransaction()
-            transaction.replace(R.id.containerId, Dz9Fragment())
+            transaction.replace(R.id.containerId, Dz11Fragment())
             transaction.commit()
         }
 
@@ -65,50 +71,51 @@ class Dz9Activity : FragmentActivity(), OnMapReadyCallback, Dz9Fragment.Listener
         })
         iconTaxiBitmap = AppCompatResources.getDrawable(this, R.drawable.taxi_onmap_icon)!!.toBitmap()
 
-        provideCarRepository().getCarByCoord(
+        viewModel.state.observe(this, Observer {
+            if (it == Dz11State.Ready) {
+                loadLastSelected()
+            }
+        })
+
+        viewModel.loadCarsList(
             CoordParams(
                 Coordinate(0.0, 0.0),
                 Coordinate(0.0, 0.0)
-            ),
-            { list: List<Poi> ->
-                listOfVehicles = list
-                if (isMapLoaded) {
-                    loadCarsOnMap()
-                }
-            },
-            {
-                Toast.makeText(
-                    this,
-                    R.string.dz9ErrorMessage,
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+            )
         )
     }
 
     override fun onMapReady(p0: GoogleMap) {
         googleMap = p0
         isMapLoaded = true
+        loadLastSelected()
+    }
 
-        if (listOfVehicles.isNotEmpty()) {
-            loadCarsOnMap()
+    override fun onDestroy() {
+        isMapLoaded = false
+        super.onDestroy()
+    }
+
+    private fun loadLastSelected() {
+        if (viewModel.isNotEmpty() && isMapLoaded) {
+            loadAllCarsOnMap(viewModel.takeCars())
+
+            viewModel.lastSelectedCar.observe(this, Observer { selectedPoi ->
+                val carPosition = LatLng(selectedPoi.coordinate!!.latitude, selectedPoi.coordinate.longitude)
+                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(carPosition, ZOOM))
+                bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
+            })
         }
     }
 
-    override fun onCarClick(id: String) {
-        val carClicked = listOfVehicles.find { it.id == id }
-        carClicked?.let { focusOnCar(it) }
-        bottomSheetBehavior.state = BottomSheetBehavior.STATE_COLLAPSED
-    }
-
-    private fun loadCarsOnMap() {
+    private fun loadAllCarsOnMap(carsList: List<Poi>) {
         val builder = LatLngBounds.builder()
 
         val iconTaxiSize = 128
         val bitmap: Bitmap = iconTaxiBitmap
         val smallMarker: Bitmap = Bitmap.createScaledBitmap(bitmap, iconTaxiSize, iconTaxiSize, false)
 
-        listOfVehicles.forEach {
+        carsList.forEach {
             val coordinates = LatLng(it.coordinate!!.latitude, it.coordinate.longitude)
             builder.include(coordinates)
 
@@ -120,13 +127,6 @@ class Dz9Activity : FragmentActivity(), OnMapReadyCallback, Dz9Fragment.Listener
             )
         }
         val bounds = builder.build()
-        val padding = 200
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, padding))
-    }
-
-    private fun focusOnCar(poi: Poi) {
-        val pos = LatLng(poi.coordinate!!.latitude, poi.coordinate.longitude)
-        val zoom = 16f
-        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(pos, zoom))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngBounds(bounds, PADDING))
     }
 }

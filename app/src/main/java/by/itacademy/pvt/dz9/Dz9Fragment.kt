@@ -28,7 +28,9 @@ class Dz9Fragment : Fragment(), Dz9Adapter.ClickListener {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = LinearLayoutManager(context)
 
-        val adapterDz9List = Dz9Adapter(emptyList(), this)
+        val adapterDz9List = Dz9Adapter(emptyList()) { item: Poi ->
+            clickListener?.onCarClick(item.id)
+        }
         recyclerView.adapter = adapterDz9List
 
         provideCarRepository().getCarByCoord(

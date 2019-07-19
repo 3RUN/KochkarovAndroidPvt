@@ -16,7 +16,6 @@ import by.itacademy.pvt.dz6.Dz6ListAdapter
 import by.itacademy.pvt.dz6.Dz6StudentProvider.filter
 import by.itacademy.pvt.dz6.Dz6StudentProvider.getStudentAsList
 import by.itacademy.pvt.dz6.entity.Student
-import by.itacademy.pvt.dz8.Dz8PrefManager
 
 class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContract.View {
 
@@ -25,7 +24,6 @@ class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContr
     }
 
     private var clickListener: Listener? = null
-    private lateinit var prefsManager: Dz8PrefManager
     private val listAdapter = Dz6ListAdapter(emptyList(), this)
     private lateinit var addStudentButton: View
     private lateinit var editTextFilter: EditText
@@ -37,7 +35,8 @@ class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContr
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        presenter = Dz11ListPresenter(this)
+        presenter = Dz11ListPresenter()
+        presenter.setView(this)
         presenter.loadStudentsList()
 
         addStudentButton = view.findViewById<View>(R.id.addButtonId)
@@ -50,12 +49,7 @@ class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContr
             recycleView.adapter = listAdapter
         }
 
-        prefsManager = Dz8PrefManager(view.context)
-        val prefsString = prefsManager.getUserText()
-        if (prefsString.isNotEmpty()) {
-            editTextFilter.setText(prefsString)
-            presenter.searchByName(prefsString)
-        }
+        presenter.initPrefsManager(view.context, editTextFilter)
 
         addStudentButton
             .setOnClickListener {
@@ -75,7 +69,7 @@ class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContr
 
     override fun onStop() {
         super.onStop()
-        prefsManager.saveUserText(editTextFilter.text.toString())
+        presenter.savePrefsManager(editTextFilter.text.toString())
     }
 
     override fun onAttach(context: Context) {
@@ -97,10 +91,6 @@ class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContr
 
     override fun onStudentClick(student: Student) {
         clickListener?.onStudentClick(student.id.toString())
-    }
-
-    override fun showSearchResults(list: List<Student>) {
-        listAdapter.updateList(list)
     }
 
     override fun showStudentsList(list: List<Student>) {

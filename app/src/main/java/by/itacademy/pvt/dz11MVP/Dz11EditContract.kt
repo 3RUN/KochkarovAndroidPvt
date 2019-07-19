@@ -12,6 +12,8 @@ interface Dz11EditContract {
 
     interface Presenter {
 
+        fun setView(view: View)
+
         fun onViewDestroyed()
 
         fun loadStudentById(id: UUID)

@@ -1,7 +1,6 @@
 package by.itacademy.pvt.dz11MVP
 
 import by.itacademy.pvt.dz6.entity.Student
-import java.util.UUID
 
 interface Dz11DetailsContract {
 
@@ -12,10 +11,12 @@ interface Dz11DetailsContract {
 
     interface Presenter {
 
+        fun setView(view: View)
+
         fun onViewDestroyed()
 
-        fun loadStudentById(id: UUID)
+        fun loadStudentById()
 
-        fun deleteStudent(id: UUID)
+        fun deleteStudent()
     }
 }

@@ -119,11 +119,11 @@ class Dz8StudentEditFragment : Fragment() {
         ageText: EditText,
         urlText: EditText
     ) {
-        if (!checkName(urlText)) {
+        if (!checkUrl(urlText)) {
             castError(getString(R.string.dz6WrongUrl))
-        } else if (!checkAge(nameText)) {
+        } else if (!checkName(nameText)) {
             castError(getString(R.string.dz6WrongName))
-        } else if (!checkUrl(ageText)) {
+        } else if (!checkAge(ageText)) {
             castError(getString(R.string.dz6WrongAge))
         }
     }

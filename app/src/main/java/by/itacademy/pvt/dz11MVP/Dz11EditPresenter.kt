@@ -6,9 +6,13 @@ import by.itacademy.pvt.dz6.Dz6StudentProvider.replaceStudent
 import by.itacademy.pvt.dz6.entity.Student
 import java.util.UUID
 
-class Dz11EditPresenter(view: Dz11EditContract.View) : Dz11EditContract.Presenter {
+class Dz11EditPresenter : Dz11EditContract.Presenter {
 
-    private var view: Dz11EditContract.View? = view
+    private var view: Dz11EditContract.View? = null
+
+    override fun setView(view: Dz11EditContract.View) {
+        this.view = view
+    }
 
     override fun onViewDestroyed() {
         this.view = null

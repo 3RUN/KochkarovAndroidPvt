@@ -49,7 +49,6 @@ class Dz11DetailsFragment : Fragment(), Dz11DetailsContract.View {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        presenter = Dz11DetailsPresenter(this)
 
         imageView = view.findViewById<ImageView>(R.id.imageLoaderViewId)
         progressBar = view.findViewById<ProgressBar>(R.id.progressBarId)
@@ -59,7 +58,10 @@ class Dz11DetailsFragment : Fragment(), Dz11DetailsContract.View {
         deleteButton = view.findViewById<View>(R.id.deleteButtonId)
 
         val studentId = arguments?.getString(ID_KEY, null)
-        presenter.loadStudentById(UUID.fromString(studentId))
+
+        presenter = Dz11DetailsPresenter(UUID.fromString(studentId))
+        presenter.setView(this)
+        presenter.loadStudentById()
 
         editButton
             .setOnClickListener {
@@ -68,7 +70,7 @@ class Dz11DetailsFragment : Fragment(), Dz11DetailsContract.View {
 
         deleteButton
             .setOnClickListener {
-                presenter.deleteStudent(UUID.fromString(studentId))
+                presenter.deleteStudent()
                 clickListener?.onDeleteClick()
             }
     }

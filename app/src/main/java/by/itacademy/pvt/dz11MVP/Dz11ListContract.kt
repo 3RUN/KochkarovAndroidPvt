@@ -13,6 +13,8 @@ interface Dz11ListContract {
 
     interface Presenter {
 
+        fun setContext(context: Context)
+
         fun setView(view: View)
 
         fun onViewDestroyed()
@@ -21,7 +23,7 @@ interface Dz11ListContract {
 
         fun loadStudentsList()
 
-        fun initPrefsManager(context: Context, editTextFilter: EditText)
+        fun initPrefsManager(editTextFilter: EditText)
 
         fun savePrefsManager(string: String)
     }

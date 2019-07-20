@@ -9,7 +9,12 @@ import by.itacademy.pvt.dz8.Dz8PrefManager
 class Dz11ListPresenter : Dz11ListContract.Presenter {
 
     private var view: Dz11ListContract.View? = null
+    private var context: Context? = null
     private lateinit var prefsManager: Dz8PrefManager
+
+    override fun setContext(context: Context) {
+        this.context = context
+    }
 
     override fun setView(view: Dz11ListContract.View) {
         this.view = view
@@ -17,6 +22,7 @@ class Dz11ListPresenter : Dz11ListContract.Presenter {
 
     override fun onViewDestroyed() {
         this.view = null
+        this.context = null
     }
 
     override fun searchByName(name: String) {
@@ -27,8 +33,8 @@ class Dz11ListPresenter : Dz11ListContract.Presenter {
         view?.showStudentsList(getStudentAsList())
     }
 
-    override fun initPrefsManager(context: Context, editTextFilter: EditText) {
-        prefsManager = Dz8PrefManager(context)
+    override fun initPrefsManager(editTextFilter: EditText) {
+        prefsManager = Dz8PrefManager(context!!)
         val prefsString = prefsManager.getUserText()
         if (prefsString.isNotEmpty()) {
             editTextFilter.setText(prefsString)

@@ -36,6 +36,7 @@ class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContr
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         presenter = Dz11ListPresenter()
+        presenter.setContext(view.context)
         presenter.setView(this)
         presenter.loadStudentsList()
 
@@ -49,7 +50,7 @@ class Dz11ListFragment : Fragment(), Dz6ListAdapter.ClickListener, Dz11ListContr
             recycleView.adapter = listAdapter
         }
 
-        presenter.initPrefsManager(view.context, editTextFilter)
+        presenter.initPrefsManager(editTextFilter)
 
         addStudentButton
             .setOnClickListener {

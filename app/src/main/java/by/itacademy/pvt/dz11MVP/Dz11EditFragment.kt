@@ -2,15 +2,12 @@ package by.itacademy.pvt.dz11MVP
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import android.widget.Toast
-import androidx.core.text.isDigitsOnly
 import androidx.fragment.app.Fragment
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz6.entity.Student
@@ -54,6 +51,7 @@ class Dz11EditFragment : Fragment(), Dz11EditContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         presenter = Dz11EditPresenter()
         presenter.setView(this)
+        presenter.setContext(view.context)
 
         nameTextView = view.findViewById<EditText>(R.id.nameEditTextId)
         ageTextView = view.findViewById<EditText>(R.id.ageEditTextId)
@@ -70,25 +68,12 @@ class Dz11EditFragment : Fragment(), Dz11EditContract.View {
 
         saveButton
             .setOnClickListener {
-                if (checkInput(nameTextView, ageTextView, urlTextView)) {
-                    if (isNewStudent) {
-                        presenter.createStudent(
-                            nameTextView.text.toString(),
-                            urlTextView.text.toString(),
-                            (ageTextView.text.toString()).toInt()
-                        )
-                    } else {
-                        presenter.editStudent(
-                            UUID.fromString(studentId),
-                            nameTextView.text.toString(),
-                            urlTextView.text.toString(),
-                            (ageTextView.text.toString()).toInt()
-                        )
-                    }
-                    clickListener?.onSaveClick()
-                } else {
-                    inputError(nameTextView, ageTextView, urlTextView)
-                }
+                presenter.onSaveButtonClick(
+                    studentId,
+                    nameTextView,
+                    ageTextView,
+                    urlTextView
+                )
             }
     }
 
@@ -109,42 +94,17 @@ class Dz11EditFragment : Fragment(), Dz11EditContract.View {
         super.onDestroyView()
     }
 
+    override fun isNewStudent(): Boolean = this.isNewStudent
+
     override fun showStudent(student: Student) {
         nameTextView.setText(student.name, TextView.BufferType.EDITABLE)
         ageTextView.setText(student.age.toString(), TextView.BufferType.EDITABLE)
         urlTextView.setText(student.url, TextView.BufferType.EDITABLE)
     }
 
-    private fun inputError(
-        nameText: EditText,
-        ageText: EditText,
-        urlText: EditText
-    ) {
-        if (!checkUrl(urlText)) {
-            castError(getString(R.string.dz6WrongUrl))
-        } else if (!checkName(nameText)) {
-            castError(getString(R.string.dz6WrongName))
-        } else if (!checkAge(ageText)) {
-            castError(getString(R.string.dz6WrongAge))
-        }
+    override fun onSaveButtonSuccess() {
+        clickListener?.onSaveClick()
     }
-
-    private fun castError(str: String) {
-        Toast.makeText(context, str, Toast.LENGTH_SHORT).show()
-    }
-
-    private fun checkUrl(urlText: EditText): Boolean =
-        urlText.text.toString().isNotEmpty() && Patterns.WEB_URL.matcher(urlText.text.toString()).matches()
-
-    private fun checkName(nameText: EditText): Boolean =
-        nameText.text.toString().isNotEmpty() && !nameText.text.toString().isDigitsOnly()
-
-    private fun checkAge(ageText: EditText): Boolean =
-        ageText.text.toString().isNotEmpty() && ageText.text.toString().isDigitsOnly() &&
-                ageText.text.toString().length <= 3 && ageText.text.toString().toInt() >= 1
-
-    private fun checkInput(nameText: EditText, ageText: EditText, urlText: EditText): Boolean =
-        checkUrl(urlText) && checkName(nameText) && checkAge(ageText)
 
     interface Listener {
         fun onSaveClick()

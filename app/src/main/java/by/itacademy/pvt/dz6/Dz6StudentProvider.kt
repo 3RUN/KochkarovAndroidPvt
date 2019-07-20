@@ -5,11 +5,13 @@ import java.util.UUID
 
 object Dz6StudentProvider {
     private var studentMap = mutableMapOf<UUID, Student>()
+    private var isFirstLoading = false
 
     private fun initStudents() {
-        if (studentMap.isNotEmpty()) {
+        if (isFirstLoading) {
             return
         }
+        isFirstLoading = true
 
         addStudent(
             "Ivan Ivanov",

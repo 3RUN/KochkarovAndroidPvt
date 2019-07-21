@@ -12,6 +12,8 @@
     <string name="dz6ButtonStr">DZ6</string>
     <string name="dz8ButtonStr">DZ8</string>
     <string name="dz9ButtonStr">DZ9</string>
+    <string name="dz11MVPButtonStr">DZ11 MVP</string>
+    <string name="dz11MVVMButtonStr">DZ11 MVVM</string>
 
     <string name="textA">AAAA</string>
     <string name="textB">BBBB</string>

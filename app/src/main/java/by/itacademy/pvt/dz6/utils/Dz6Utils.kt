@@ -13,7 +13,7 @@ fun loadStudentIcon(imageSize: Int, student: Student, imageView: ImageView, prog
     imageLoaderCircle(student.url, imageView, imageSize, imageSize, object : ImageLoaderCallback {
         override fun onError(e: Exception) {
             hideStudentProgressBar(progressBar)
-            setStudentErrorImage(imageView)
+            setStudentErrorImage(imageView, imageSize)
         }
 
         override fun onSuccess() {
@@ -22,7 +22,9 @@ fun loadStudentIcon(imageSize: Int, student: Student, imageView: ImageView, prog
     })
 }
 
-private fun setStudentErrorImage(imageView: ImageView) {
+private fun setStudentErrorImage(imageView: ImageView, imageSize: Int) {
+    imageView.layoutParams.width = imageSize
+    imageView.layoutParams.height = imageSize
     imageView.setImageResource(R.drawable.error_icon)
 }
 

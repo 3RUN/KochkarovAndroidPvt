@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz9.entity.Poi
 
-class Dz9Adapter(private var items: List<Poi>, private val listener: ClickListener) :
+class Dz9Adapter(private var items: List<Poi>, private val callback: (Poi) -> Unit) :
     RecyclerView.Adapter<Dz9Adapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -17,7 +17,7 @@ class Dz9Adapter(private var items: List<Poi>, private val listener: ClickListen
 
         val holder = ViewHolder(view)
         holder.itemView.setOnClickListener {
-            listener.onCarClick(items[holder.adapterPosition])
+            callback(items[holder.adapterPosition])
         }
         return holder
     }

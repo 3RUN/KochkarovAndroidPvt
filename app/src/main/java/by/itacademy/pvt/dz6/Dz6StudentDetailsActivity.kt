@@ -56,7 +56,7 @@ class Dz6StudentDetailsActivity : Activity() {
 
         deleteButton
             .setOnClickListener {
-                removeStudentAndExit(student)
+                removeStudentAndExit(student.id)
             }
     }
 
@@ -64,8 +64,8 @@ class Dz6StudentDetailsActivity : Activity() {
         startActivity(Dz6StudentEditActivity.getIntent(this@Dz6StudentDetailsActivity, student.id))
     }
 
-    private fun removeStudentAndExit(student: Student) {
-        removeStudent(student)
+    private fun removeStudentAndExit(id: UUID) {
+        removeStudent(id)
         exitToMainList()
     }
 

@@ -5,13 +5,13 @@ import java.util.UUID
 
 object Dz6StudentProvider {
     private var studentMap = mutableMapOf<UUID, Student>()
-    private var isLoaded = false
+    private var isFirstLoading = false
 
-    fun initStudents() {
-        if (isLoaded) {
+    private fun initStudents() {
+        if (isFirstLoading) {
             return
         }
-        isLoaded = true
+        isFirstLoading = true
 
         addStudent(
             "Ivan Ivanov",
@@ -51,10 +51,16 @@ object Dz6StudentProvider {
     }
 
     fun getStudent(id: UUID): Student {
-        return studentMap.get(id)!!
+
+        initStudents()
+
+        return studentMap[id]!!
     }
 
     fun getStudentAsList(): MutableList<Student> {
+
+        initStudents()
+
         var list = mutableListOf<Student>()
         for (student in studentMap) {
             list.add(student.value)
@@ -72,13 +78,12 @@ object Dz6StudentProvider {
         studentMap.put(student.id, student)
     }
 
-    fun removeStudent(student: Student) {
-        studentMap.remove(student.id)
+    fun removeStudent(id: UUID) {
+        studentMap.remove(id)
     }
 
     fun replaceStudent(student: Student) {
-        removeStudent(student)
-        studentMap.put(student.id, student)
+        studentMap.set(student.id, student)
     }
 
     fun filter(text: String, originList: MutableList<Student>): MutableList<Student> {

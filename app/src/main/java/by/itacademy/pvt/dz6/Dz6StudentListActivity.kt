@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz6.Dz6StudentProvider.filter
 import by.itacademy.pvt.dz6.Dz6StudentProvider.getStudentAsList
-import by.itacademy.pvt.dz6.Dz6StudentProvider.initStudents
 import by.itacademy.pvt.dz6.entity.Student
 
 class Dz6StudentListActivity : Activity(), Dz6ListAdapter.ClickListener {
@@ -28,7 +27,6 @@ class Dz6StudentListActivity : Activity(), Dz6ListAdapter.ClickListener {
         recycleView.setHasFixedSize(true)
         recycleView.layoutManager = LinearLayoutManager(this)
 
-        initStudents()
         val studentsFull = getStudentAsList()
         var studentsFiltered = studentsFull.toMutableList()
 

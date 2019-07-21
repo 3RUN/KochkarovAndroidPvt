@@ -7,6 +7,8 @@ import android.view.View
 import by.itacademy.pvt.R
 import by.itacademy.pvt.dz0.Dz0Activity
 import by.itacademy.pvt.dz1.Dz1Activity
+import by.itacademy.pvt.dz11MVP.Dz11MVPActivity
+import by.itacademy.pvt.dz11MVVM.Dz11MVVMActivity
 import by.itacademy.pvt.dz2.Dz2Activity
 import by.itacademy.pvt.dz2.Dz2LoginActivity
 import by.itacademy.pvt.dz3.Dz3Activity
@@ -35,6 +37,8 @@ class MenuActivity : Activity(), View.OnClickListener {
         val dz6Button = findViewById<View>(R.id.dz6ButtonId)
         val dz8Button = findViewById<View>(R.id.dz8ButtonId)
         val dz9Button = findViewById<View>(R.id.dz9ButtonId)
+        val dz11MVPButton = findViewById<View>(R.id.dz11MVPButtonId)
+        val dz11MVVMButton = findViewById<View>(R.id.dz11MVVMButtonId)
 
         dz0Button
             .setOnClickListener {
@@ -84,6 +88,14 @@ class MenuActivity : Activity(), View.OnClickListener {
             .setOnClickListener {
                 onClick(dz9Button)
             }
+        dz11MVPButton
+            .setOnClickListener {
+                onClick(dz11MVPButton)
+            }
+        dz11MVVMButton
+            .setOnClickListener {
+                onClick(dz11MVVMButton)
+            }
     }
 
     override fun onClick(v: View?) {
@@ -130,6 +142,14 @@ class MenuActivity : Activity(), View.OnClickListener {
             }
             R.id.dz9ButtonId -> {
                 val intent = Intent(this, Dz9Activity::class.java)
+                startActivity(intent)
+            }
+            R.id.dz11MVPButtonId -> {
+                val intent = Intent(this, Dz11MVPActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.dz11MVVMButtonId -> {
+                val intent = Intent(this, Dz11MVVMActivity::class.java)
                 startActivity(intent)
             }
         }
